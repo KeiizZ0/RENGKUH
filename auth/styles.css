@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFF6E9;
+    color: #2F3E46;
+}
+
+
+
+/* === Login/Register Form === */
+
+.container{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 4rem;
+}
+
+/* === div image === */
+.img-container{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 420px;
+    height: 420px;
+    background-color: black;
+    border-radius: 1.5rem;
+    background-image: url('https://media.istockphoto.com/id/1089067440/photo/funny-orange-british-kitten-lies-on-its-side-on-a-blue-sofa.jpg?s=170667a&w=0&k=20&c=xjGCQz1SCtMnCC0jkpA5bds_hWuTpkvjmNItKYvCVWY=');
+}
+
+.img-text{
+    color: white;
+    margin: 1.5rem;
+}
+
+.img-text p {
+    font-size: 12px;
+}
+
+/* === div login register === */
+
+.form-container{
+    margin-top: 0;
+    width: 420px;
+    min-height: 350px;
+    gap: 1rem;
+}
+
+/* Login */
+.form-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* RULES */
+.hidden {
+    display: none;
+}
+
+/* Element Form */
+
+.btn-ganti{
+    display: flex;
+    justify-content: center;    
+    width: 100%;
+    height: 2.5rem;
+    background-color: #F0E6D6;
+    border-radius: 3rem;
+    margin-bottom: 1rem;
+}
+
+.tab-button{
+    margin: 3px;
+    width: 100%;
+    border-radius: 5rem;
+    background-color: transparent;
+    color: #2F3E46;
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-button.active {
+    background-color: white;
+    border: 0;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    height: 48px;
+    padding: 0.8rem 0.9rem;
+    border-radius: 10px;
+    border: 2px solid rgb(179, 179, 179);
+    font-size: 16px; 
+    background-color: #fff;
+    color: #2F3E46;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: 2px solid rgba(47, 62, 70, 0.2);
+    border-color: #2F3E46;
+}
+
+.pesan{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: red;
+    font-size: 14px;
+}
+
+.btn-submit {
+    height: 2.5rem;
+    border-radius: 1rem;
+    background-color: #2F3E46;
+    color: white;
+    font-weight: bold;
+    margin-top: 1rem;
+}
