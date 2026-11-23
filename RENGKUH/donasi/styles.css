@@ -1,0 +1,580 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+.donasi-page {
+    background-color: #FAF6F0;
+    color: #2B2623;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    min-height: 78vh;
+    display: flex;
+    align-items: center;
+    padding: 88px 0 100px;
+}
+
+.container-figma {
+    width: 100%;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.eyebrow {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #D86A42;
+    margin-bottom: 12px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* === LANGKAH 1: TAMPILAN AWAL === */
+.donasi-intro {
+    text-align: center;
+    max-width: 540px;
+    margin: 0 auto;
+    animation: fadeIn 0.4s ease;
+}
+
+.donasi-title {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.24;
+    color: #23382A;
+    margin: 0 0 18px 0;
+}
+
+.donasi-desc {
+    font-size: 0.92rem;
+    color: #6B655F;
+    line-height: 1.75;
+    margin: 0 0 32px 0;
+}
+
+.btn-cta-orange {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #D86A42;
+    color: #FFFFFF;
+    border: none;
+    padding: 13px 32px;
+    border-radius: 999px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 14px rgba(216, 106, 66, 0.25);
+}
+
+.btn-cta-orange:hover:not(:disabled) {
+    background-color: #C25933;
+    transform: translateY(-2px);
+}
+
+.btn-cta-orange:disabled {
+    background-color: #D5CEC4;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+/* === LANGKAH 2: 3 PILIHAN DONASI === */
+.donasi-pilihan-section {
+    animation: fadeInSlide 0.35s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pilihan-header {
+    margin-bottom: 32px;
+}
+
+.section-heading {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: #23382A;
+    margin: 0;
+}
+
+.pilihan-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.pilihan-card {
+    cursor: pointer;
+    position: relative;
+}
+
+.pilihan-card input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.card-content {
+    height: 100%;
+    background-color: #FFFFFF;
+    border: 1.5px solid #E3DCD2;
+    border-radius: 14px;
+    padding: 26px 22px;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    box-shadow: 0 2px 10px rgba(35, 56, 42, 0.03);
+}
+
+.pilihan-card:hover .card-content {
+    border-color: #B8AEA0;
+    transform: translateY(-3px);
+}
+
+.pilihan-card input[type="radio"]:checked + .card-content {
+    border-color: #D86A42;
+    box-shadow: 0 8px 22px rgba(216, 106, 66, 0.14);
+}
+
+.pilihan-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.icon-green {
+    background-color: #23382A;
+    color: #FFFFFF;
+}
+
+.icon-orange {
+    background-color: #D86A42;
+    color: #FFFFFF;
+}
+
+.icon-brown {
+    background-color: #F3ECE4;
+    color: #7C583B;
+}
+
+.card-content h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #23382A;
+    margin: 0 0 10px 0;
+}
+
+.card-underline {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #EDE7DD;
+    margin-bottom: 12px;
+}
+
+.card-content p {
+    font-size: 0.82rem;
+    color: #6B655F;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* Kotak Form Lanjutan */
+.nominal-card {
+    margin-top: 24px;
+    background-color: #FFFFFF;
+    border: 1px solid #E3DCD2;
+    border-radius: 14px;
+    padding: 28px 26px;
+    animation: fadeInSlide 0.3s ease forwards;
+}
+
+.input-label {
+    display: block;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #23382A;
+    margin-bottom: 16px;
+}
+
+.text-orange {
+    color: #D86A42;
+}
+
+/* Grid Pilihan Anjing & Kucing (Donasi Hewan) */
+.hewan-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+/* Grid Pilihan Perlengkapan (Merawat Hewan) */
+.barang-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.hewan-option {
+    cursor: pointer;
+    position: relative;
+}
+
+.hewan-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.hewan-card {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background-color: #FAF6F0;
+    border: 1.5px solid #E3DCD2;
+    border-radius: 12px;
+    padding: 18px 18px;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.barang-grid .hewan-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.hewan-option:hover .hewan-card {
+    border-color: #B8AEA0;
+}
+
+.hewan-option input[type="radio"]:checked + .hewan-card {
+    background-color: #FFFFFF;
+    border-color: #23382A;
+    box-shadow: 0 6px 16px rgba(35, 56, 42, 0.08);
+}
+
+.hewan-icon {
+    font-size: 1.65rem;
+    width: 44px;
+    height: 44px;
+    background-color: #EFE8DC;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.hewan-card h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #23382A;
+    margin: 0 0 4px 0;
+}
+
+.hewan-card p {
+    font-size: 0.79rem;
+    color: #6B655F;
+    margin: 0;
+    line-height: 1.48;
+}
+
+/* Input Detail (Hewan & Barang) */
+.detail-fields {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #EDE7DD;
+    display: grid;
+    gap: 14px;
+    animation: fadeInSlide 0.25s ease forwards;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.sub-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #23382A;
+}
+
+.detail-fields textarea,
+.detail-fields input {
+    background-color: #FAF6F0;
+    border: 1.5px solid #D9D0C3;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.86rem;
+    color: #23382A;
+    outline: none;
+    resize: vertical;
+}
+
+.detail-fields textarea:focus,
+.detail-fields input:focus {
+    border-color: #23382A;
+    background-color: #FFFFFF;
+}
+
+/* Input Nominal Rupiah (Pilihan Uang) */
+.nominal-input-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: #FAF6F0;
+    border: 1.5px solid #D9D0C3;
+    border-radius: 10px;
+    padding: 12px 16px;
+}
+
+.nominal-input-wrapper:focus-within {
+    border-color: #23382A;
+    background-color: #FFFFFF;
+}
+
+.currency-prefix {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #23382A;
+    margin-right: 10px;
+}
+
+#input-nominal {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #23382A;
+    outline: none;
+}
+
+.quick-amounts {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+}
+
+.btn-quick {
+    background-color: #FAF6F0;
+    border: 1px solid #E3DCD2;
+    color: #5C5752;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-quick:hover,
+.btn-quick.active {
+    background-color: #23382A;
+    border-color: #23382A;
+    color: #FFFFFF;
+}
+
+.action-buttons {
+    margin-top: 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-back {
+    background: transparent;
+    border: none;
+    color: #6B655F;
+    font-size: 0.86rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 8px 4px;
+}
+
+.btn-back:hover {
+    color: #23382A;
+}
+
+/* === LANGKAH 3: SUKSES & TELAPAK KUCING === */
+.sukses-box {
+    max-width: 480px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    border: 1px solid #E3DCD2;
+    border-radius: 16px;
+    padding: 40px 28px;
+    text-align: center;
+    animation: fadeInSlide 0.35s ease forwards;
+}
+
+/* === ANIMASI TELAPAK KUCING BERGERAK === */
+.paw-wrapper {
+    width: 78px;
+    height: 78px;
+    background-color: #FAF6F0;
+    border: 2px solid #D86A42;
+    color: #D86A42;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(216, 106, 66, 0.16);
+    /* Animasi muncul memantul + efek denyut halo lembut */
+    animation: 
+        pawPopBounce 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
+        pawPulseRing 2.2s ease-in-out 0.7s infinite;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Ikon telapak kucing melambai kanan-kiri terus menerus */
+.cat-paw-svg {
+    transform-origin: bottom center;
+    animation: pawWave 1.8s ease-in-out 0.65s infinite;
+}
+
+.paw-wrapper:hover {
+    background-color: #FFFDFB;
+    transform: scale(1.08);
+}
+
+/* Saat kursor diarahkan, lambaian telapak kucing jadi lebih cepat & antusias */
+.paw-wrapper:hover .cat-paw-svg {
+    animation: pawWaveFast 0.45s ease-in-out infinite;
+}
+
+.paw-wrapper:active {
+    transform: scale(0.92);
+}
+
+/* 1. Animasi awal muncul memantul */
+@keyframes pawPopBounce {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) rotate(-25deg);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.14) rotate(8deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+/* 2. Animasi telapak kucing melambai lembut */
+@keyframes pawWave {
+    0%, 100% {
+        transform: rotate(-8deg) translateY(0);
+    }
+    25% {
+        transform: rotate(10deg) translateY(-2px);
+    }
+    50% {
+        transform: rotate(-6deg) translateY(0);
+    }
+    75% {
+        transform: rotate(8deg) translateY(-2px);
+    }
+}
+
+/* 3. Animasi lambaian cepat saat disentuh mouse */
+@keyframes pawWaveFast {
+    0%, 100% {
+        transform: rotate(-14deg) scale(1.05);
+    }
+    50% {
+        transform: rotate(14deg) scale(1.05);
+    }
+}
+
+/* 4. Efek gelombang lingkaran oranye lembut di sekitar lingkaran */
+@keyframes pawPulseRing {
+    0% {
+        box-shadow: 0 0 0 0 rgba(216, 106, 66, 0.35);
+    }
+    70% {
+        box-shadow: 0 0 0 12px rgba(216, 106, 66, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(216, 106, 66, 0);
+    }
+}
+
+.miaw-badge {
+    display: inline-block;
+    background-color: #F3ECE4;
+    color: #23382A;
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+}
+
+.sukses-box h2 {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.45rem;
+    color: #23382A;
+    margin: 0 0 12px;
+}
+
+.sukses-box p {
+    font-size: 0.9rem;
+    color: #6B655F;
+    line-height: 1.65;
+    margin: 0 0 26px;
+}
+
+@media (max-width: 768px) {
+    .donasi-title {
+        font-size: 1.95rem;
+    }
+    .pilihan-grid,
+    .hewan-grid,
+    .barang-grid {
+        grid-template-columns: 1fr;
+    }
+    .action-buttons {
+        flex-direction: column-reverse;
+        gap: 14px;
+    }
+    .action-buttons .btn-cta-orange {
+        width: 100%;
+    }
+}
