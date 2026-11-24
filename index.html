@@ -34,9 +34,178 @@
 
     <!-- ==== START PAGE ==== -->
 
+    <main>
 
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-text">
+                <p class="eyebrow">Adopsi yang bertanggung jawab</p>
+                <h1>Setiap hewan layak punya <span class="accent">pelukan</span> untuk pulang.</h1>
+                <p class="hero-desc">
+                    Rengkuh menghubungkan hewan dari penampungan mitra dengan keluarga yang tepat,
+                    lewat kuesioner kecocokan, profil yang transparan, dan pendampingan perawatan harian.
+                </p>
+                <div class="hero-buttons">
+                    <a href="../match-quiz/match-quiz.html" class="btn btn-primary">Cek Kecocokan &rarr;</a>
+                    <a href="../katalog-pet/pets.html" class="btn btn-outline">Lihat Katalog</a>
+                </div>
+                <div class="stats">
+                    <div class="stat">
+                        <strong>1.420+</strong>
+                        <span>Hewan teradopsi</span>
+                    </div>
+                    <div class="stat">
+                        <strong>48</strong>
+                        <span>Penampungan mitra</span>
+                    </div>
+                    <div class="stat">
+                        <strong>12</strong>
+                        <span>Kota terjangkau</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="../Assets/hero.jpg" alt="Seorang perempuan memeluk anjing dan kucing">
+                <div class="hero-badge">
+                    <strong>Pendampingan 30 hari</strong>
+                    <span>Setelah adopsi, kami temani prosesnya.</span>
+                </div>
+            </div>
+        </section>
 
-    
+        <!-- KEUNGGULAN -->
+        <section class="features">
+            <div class="section-inner">
+                <p class="eyebrow">Kenapa Rengkuh</p>
+                <h2 class="section-title">Adopsi yang terencana,<br>bukan sekadar impulsif.</h2>
+
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon icon-green">1</div>
+                        <h3>Kuesioner Kecocokan</h3>
+                        <p>Jawab beberapa pertanyaan tentang rumah dan gaya hidupmu, lalu lihat hewan yang paling cocok.</p>
+                        <a href="../match-quiz/match-quiz.html">Coba sekarang &rarr;</a>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon icon-orange">2</div>
+                        <h3>Transparansi Penuh</h3>
+                        <p>Riwayat kesehatan, karakter, dan kebutuhan setiap hewan ditampilkan apa adanya.</p>
+                        <a href="../katalog-pet/pets.html">Lihat katalog &rarr;</a>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon icon-green">3</div>
+                        <h3>Daily Care Tracker</h3>
+                        <p>Catat makan, minum, dan jadwal vaksin supaya perawatan hewanmu tetap teratur.</p>
+                        <a href="../my-pet-tracker/my-pet-tracker.html">Pelajari &rarr;</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- HEWAN UNGGULAN -->
+        <section class="featured">
+            <div class="section-inner">
+                <p class="eyebrow">Siap diadopsi</p>
+                <div class="featured-header">
+                    <h2 class="section-title">Hewan unggulan minggu ini</h2>
+                    <form class="filter-form" action="../katalog-pet/pets.html" method="get">
+                        <label for="filter-hewan">Tampilkan:</label>
+                        <select name="jenis" id="filter-hewan">
+                            <option value="">Semua hewan</option>
+                            <option value="kucing">Kucing</option>
+                            <option value="anjing">Anjing</option>
+                        </select>
+                    </form>
+                </div>
+
+                <div class="pet-grid">
+                    <article class="pet-card">
+                        <img src="../Assets/mochi.jpg" alt="Mochi, kucing Domestik Oranye">
+                        <div class="pet-body">
+                            <div class="pet-title">
+                                <h3>Mochi</h3>
+                                <span class="pet-gender">Jantan</span>
+                            </div>
+                            <p class="pet-breed">Domestik Oranye</p>
+                            <div class="tags">
+                                <span class="tag">2 tahun</span>
+                                <span class="tag">Sedang</span>
+                                <span class="tag">Steril</span>
+                            </div>
+                            <p class="pet-location">Bandung</p>
+                            <a href="../adopt-form/adopt-form.html" class="pet-link">Lihat profil &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="pet-card">
+                        <img src="../Assets/mimi.jpg" alt="Mimi, anjing Golden Mix">
+                        <div class="pet-body">
+                            <div class="pet-title">
+                                <h3>Mimi</h3>
+                                <span class="pet-gender">Betina</span>
+                            </div>
+                            <p class="pet-breed">Golden Mix</p>
+                            <div class="tags">
+                                <span class="tag">3 tahun</span>
+                                <span class="tag">Besar</span>
+                                <span class="tag">Vaksin</span>
+                            </div>
+                            <p class="pet-location">Bandung</p>
+                            <a href="../adopt-form/adopt-form.html" class="pet-link">Lihat profil &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="pet-card">
+                        <img src="../Assets/rupi.jpg" alt="Rupi, anjing Beagle">
+                        <div class="pet-body">
+                            <div class="pet-title">
+                                <h3>Rupi</h3>
+                                <span class="pet-gender">Jantan</span>
+                            </div>
+                            <p class="pet-breed">Beagle</p>
+                            <div class="tags">
+                                <span class="tag">1 tahun</span>
+                                <span class="tag">Sedang</span>
+                                <span class="tag">Aktif</span>
+                            </div>
+                            <p class="pet-location">Cimahi</p>
+                            <a href="../adopt-form/adopt-form.html" class="pet-link">Lihat profil &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="pet-card">
+                        <img src="../Assets/luna.jpg" alt="Luna, kucing hitam">
+                        <div class="pet-body">
+                            <div class="pet-title">
+                                <h3>Luna</h3>
+                                <span class="pet-gender">Betina</span>
+                            </div>
+                            <p class="pet-breed">Domestik Hitam</p>
+                            <div class="tags">
+                                <span class="tag">1 tahun</span>
+                                <span class="tag">Kecil</span>
+                                <span class="tag">Tenang</span>
+                            </div>
+                            <p class="pet-location">Bandung</p>
+                            <a href="../adopt-form/adopt-form.html" class="pet-link">Lihat profil &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <div class="cta-box">
+                <div class="cta-text">
+                    <h2>Belum yakin hewan mana yang cocok?</h2>
+                    <p>Isi kuesioner singkat, dan kami carikan hewan yang sesuai dengan rumah dan gaya hidupmu.</p>
+                </div>
+                <a href="../match-quiz/match-quiz.html" class="btn btn-light">Mulai Kuesioner</a>
+            </div>
+        </section>
+
+    </main>
 
     <!-- ==== END PAGE ==== -->
 
