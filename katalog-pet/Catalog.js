@@ -1,4 +1,6 @@
+// bungkus logika katalog biar jalan pas elemen HTML udah siap
 function mulaiCatalog() {
+  // ambil elemen input, dropdown, tombol reset, sama kontrol filter/sort
   const inputCari = document.querySelector('.input-cari');
   const selectUrut = document.querySelector('.select-urut');
   const tombolReset = document.querySelector('.reset-link');
@@ -10,8 +12,10 @@ function mulaiCatalog() {
   const teksJumlah = document.querySelector('.result-count') || document.getElementById('result-count');
   const wadahKartu = document.querySelector('.cards-grid') || document.getElementById('cards-grid');
 
+  // nyimpen seluruh data hewan hasil fetch dari pets.json
   let semuaDataHewan = [];
 
+  // update tulisan jumlah hasil atau nampilin pesan status/error
   function setStatus(pesan) {
     if (teksJumlah) {
       teksJumlah.textContent = pesan;
@@ -20,6 +24,7 @@ function mulaiCatalog() {
     }
   }
 
+  // nentuin tahap umur (Anak / Dewasa / Senior) dari teks umur
   function tentukanTahap(umurStr) {
     const teks = String(umurStr || '').toLowerCase();
     if (teks.includes('bulan') || teks.includes('bln') || teks.includes('minggu')) {
@@ -33,15 +38,18 @@ function mulaiCatalog() {
     return 'Dewasa';
   }
 
+  // nyamain format JSON baru (umur, gender, lokasi, gambar, traits) ke data kartu katalog
   function normalisasiPet(item, idx) {
     const traits = item.traits || {};
     const kec = item.kecocokan || {};
     const tempatTinggal = Array.isArray(traits.tempatTinggal) ? traits.tempatTinggal : [];
 
+    // dukung foto array maupun field "gambar" tunggal
     const fotoList = Array.isArray(item.foto)
       ? item.foto
       : (item.gambar ? [item.gambar] : (item.foto ? [item.foto] : []));
 
+    // ambil angka buat sorting murah/mahal dan teks buat ditampilin di kartu
     let biayaAngka = 0;
     let biayaTeks = 'Gratis';
     if (item.biaya_adopsi !== undefined) {
@@ -81,6 +89,7 @@ function mulaiCatalog() {
     };
   }
 
+  // nyoba fetch pets.json lewat beberapa kemungkinan path biar aman pas jalan di Live Server
   async function ambilDataPets() {
     const daftarJalur = [
       '../data/pets.json',
@@ -97,6 +106,7 @@ function mulaiCatalog() {
       try {
         res = await fetch(jalur);
       } catch (e) {
+        // lanjut coba path berikutnya kalau gagal fetch
         continue;
       }
 
@@ -107,6 +117,7 @@ function mulaiCatalog() {
           const list = Array.isArray(data) ? data : (data.pets || data.data || []);
           return list.map(normalisasiPet);
         } catch (errJson) {
+          // kasih tau kalau file ketemu tapi sintaks JSON-nya ada yang salah
           throw new Error('File ' + jalur + ' ketemu, tapi isi JSON error: ' + errJson.message);
         }
       }
@@ -114,6 +125,7 @@ function mulaiCatalog() {
     throw new Error('File pets.json tidak ditemukan. Pastikan buka folder proyek utama lewat Live Server.');
   }
 
+  // bikin tag img: URL luar langsung dipake, gambar lokal fallback ke ../Assets/
   function buatTagImg(sumberFoto, altText, className) {
     const src = sumberFoto || '';
     if (src.startsWith('http://') || src.startsWith('https://')) {
@@ -122,6 +134,7 @@ function mulaiCatalog() {
     return `<img src="${src}" alt="${altText}" class="${className}" onerror="if(!this.dataset.f){this.dataset.f='1';this.src='../Assets/${src}';}">`;
   }
 
+  // render daftar kartu hewan ke dalam grid katalog
   function tampilkanKartu(daftarHewan) {
     if (!wadahKartu) {
       setStatus('Error HTML: elemen class="cards-grid" tidak ditemukan di pets.html');
@@ -131,6 +144,7 @@ function mulaiCatalog() {
     wadahKartu.innerHTML = '';
 
     daftarHewan.forEach(function(pet) {
+      // susun badge kecocokan rumah
       let tagHTML = '';
       if (pet.kecocokan.ramah_anak) tagHTML += '<p class="tag">Ramah anak</p>';
       if (pet.kecocokan.akur_hewan_lain) tagHTML += '<p class="tag">Akur dengan hewan lain</p>';
@@ -183,11 +197,13 @@ function mulaiCatalog() {
     setStatus(daftarHewan.length + ' hewan ditemukan');
   }
 
+  // nyaring data sesuai input cari + filter aktif, lalu urutin biayanya
   function prosesFilterDanUrut() {
     const kataKunci = inputCari ? inputCari.value.toLowerCase() : '';
     const kelaminDipilih = selectKelamin ? selectKelamin.value.toLowerCase() : 'semua';
     const energiDipilih = selectEnergi ? selectEnergi.value.toLowerCase() : 'semua';
 
+    // ambil checkbox jenis hewan & kecocokan yang lagi dicentang
     const grupCheckbox = document.querySelectorAll('.checkbox-list');
     const listJenis = grupCheckbox[0] ? grupCheckbox[0].querySelectorAll('input:checked') : [];
     const jenisDipilih = Array.from(listJenis).map(cb => cb.parentElement.textContent.trim().toLowerCase());
@@ -195,6 +211,7 @@ function mulaiCatalog() {
     const listCocok = grupCheckbox[1] ? grupCheckbox[1].querySelectorAll('input:checked') : [];
     const cocokDipilih = Array.from(listCocok).map(cb => cb.parentElement.textContent.trim().toLowerCase());
 
+    // ambil pill button tahap usia & ukuran yang lagi aktif
     const grupPill = document.querySelectorAll('.pill-buttons');
     const tombolUsia = grupPill[0] ? grupPill[0].querySelector('button.aktif') : null;
     const usiaDipilih = tombolUsia ? tombolUsia.textContent.toLowerCase() : '';
@@ -210,6 +227,7 @@ function mulaiCatalog() {
       const cocokUsia = usiaDipilih === '' || pet.tahap.toLowerCase() === usiaDipilih;
       const cocokUkuran = ukuranDipilih === '' || pet.ukuran.toLowerCase() === ukuranDipilih;
 
+      // cek level energi sesuai pilihan dropdown
       let cocokEnergi = true;
       const energiHewan = (pet.tingkat_energi || '').toLowerCase();
       if (energiDipilih === 'rendah') {
@@ -220,6 +238,7 @@ function mulaiCatalog() {
         cocokEnergi = energiHewan.includes('tinggi') || energiHewan.includes('aktif');
       }
 
+      // cek semua syarat kecocokan yang dicentang
       let cocokRumah = true;
       cocokDipilih.forEach(function(syarat) {
         if (syarat.includes('ramah anak') && !pet.kecocokan.ramah_anak) cocokRumah = false;
@@ -230,6 +249,7 @@ function mulaiCatalog() {
       return cocokCari && cocokJenis && cocokKelamin && cocokUsia && cocokUkuran && cocokEnergi && cocokRumah;
     });
 
+    // urutin hasil berdasarkan biaya termurah / termahal
     const urutan = selectUrut ? selectUrut.value : 'terbaru';
     if (urutan === 'termurah') {
       hasil.sort((a, b) => a.biayaAngka - b.biayaAngka);
@@ -240,6 +260,7 @@ function mulaiCatalog() {
     tampilkanKartu(hasil);
   }
 
+  // load data awal pas halaman dibuka
   ambilDataPets()
     .then(data => {
       semuaDataHewan = data;
@@ -250,12 +271,14 @@ function mulaiCatalog() {
       console.error(error);
     });
 
+  // pasang listener buat search, dropdown, sama checkbox
   if (inputCari) inputCari.addEventListener('input', prosesFilterDanUrut);
   if (selectKelamin) selectKelamin.addEventListener('change', prosesFilterDanUrut);
   if (selectEnergi) selectEnergi.addEventListener('change', prosesFilterDanUrut);
   if (selectUrut) selectUrut.addEventListener('change', prosesFilterDanUrut);
   semuaCheckbox.forEach(cb => cb.addEventListener('change', prosesFilterDanUrut));
 
+  // toggle pill button (klik sekali aktif, klik lagi matiin)
   semuaTombolPill.forEach(function(tombol) {
     tombol.addEventListener('click', function() {
       const grup = tombol.parentElement.querySelectorAll('button');
@@ -266,6 +289,7 @@ function mulaiCatalog() {
     });
   });
 
+  // balikin semua filter ke kondisi awal
   if (tombolReset) {
     tombolReset.addEventListener('click', function(e) {
       e.preventDefault();
@@ -280,6 +304,7 @@ function mulaiCatalog() {
   }
 }
 
+// pastiin mulaiCatalog jalan setelah DOM siap
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', mulaiCatalog);
 } else {
