@@ -31,7 +31,7 @@
             return;
         }
 
-        if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+        if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ // cek format harus ada @, . (titik) dan tanpa spasi
             pesan.textContent = 'Format email tidak valid. Contoh: nama@gmail.com.';
             return;
         }
@@ -43,6 +43,7 @@
 
         let users;
         try {
+            //ambil data dari localstorage jadi Array/object kalau ga ada kembalikan array kosong
             users = JSON.parse(localStorage.getItem('users') || '[]');
         } catch {
             pesan.textContent = 'Data akun yang tersimpan tidak dapat dibaca. Coba bersihkan data akun browser lalu daftar lagi.';
@@ -61,7 +62,7 @@
 
         users.push({nama, email, password});
         try {
-            localStorage.setItem('users', JSON.stringify(users));
+            localStorage.setItem('users', JSON.stringify(users)); //ini untuk tambahkan data dari Array menjadi JSON
         } catch {
             pesan.textContent = 'Akun tidak dapat disimpan di browser. Periksa ruang penyimpanan atau pengaturan privasi browser.';
             return;
@@ -84,13 +85,19 @@
             pesan.style.color = 'red';
             return;
         }
+
+        //ambil data JSON menjadi Array/object
         let users = JSON.parse(localStorage.getItem('users') || "[]")
+
+        //carai dari Array users adakah yang sama email dan password nya
         const validUser = users.find(u => u.email === email && u.password === password)
         if(validUser){
+            //kalau benar tambahkan validUser dari Array menjadi JSON simpan ke localstorage
             localStorage.setItem('currentUser', JSON.stringify(validUser));
             alert('Login berhasil!')
             window.location.href = '../index.html'
         } else{
+            //kalau tidak valid
             pesan.textContent = 'Email atau Password tidak valid!'
         }
         
