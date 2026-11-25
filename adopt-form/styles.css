@@ -1,0 +1,482 @@
+/* ===== VARIABEL WARNA ===== */
+:root {
+    --cream: #FFF6E9;
+    --field: #FAF1E4;
+    --green: #2E4638;
+    --orange: #C96A3E;
+    --text: #2F3E46;
+    --muted: #6B7A72;
+    --border: #EADFCB;
+}
+
+/* ===== HALAMAN ===== */
+.adopt-page {
+    padding: 40px 24px 0 24px;
+}
+
+.adopt-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.back-link {
+    display: inline-block;
+    font-size: 13px;
+    color: var(--muted);
+    text-decoration: none;
+    margin-bottom: 28px;
+}
+
+.back-link:hover {
+    color: var(--text);
+}
+
+.adopt-layout {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 32px;
+    align-items: start;
+}
+
+/* ===== JUDUL ===== */
+.step-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--orange);
+    margin: 0 0 6px 0;
+}
+
+.adopt-title {
+    font-size: 26px;
+    font-weight: 500;
+    margin: 0 0 12px 0;
+}
+
+.adopt-intro {
+    font-size: 14px;
+    color: var(--muted);
+    max-width: 420px;
+    margin: 0 0 24px 0;
+}
+
+/* ===== FORM ===== */
+.adopt-form {
+    background-color: white;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 28px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--field);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 13px;
+    padding: 12px 16px;
+}
+
+.form-group input {
+    border-radius: 999px;
+}
+
+.form-group textarea {
+    border-radius: 14px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #a3a79f;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--green);
+    background-color: white;
+}
+
+.btn-submit {
+    background-color: var(--green);
+    color: white;
+    border: none;
+    border-radius: 999px;
+    padding: 11px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: #1f3227;
+}
+
+/* ===== KARTU HEWAN ===== */
+.pet-summary {
+    background-color: white;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.pet-summary img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: var(--field);
+}
+
+.pet-summary-body {
+    padding: 18px;
+}
+
+.pet-summary-body h2 {
+    font-size: 22px;
+    margin: 0 0 2px 0;
+}
+
+.pet-summary-breed {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0;
+}
+
+.pet-summary-body hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 14px 0;
+}
+
+.pet-summary-note {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 800px) {
+    .adopt-layout {
+        grid-template-columns: 1fr;
+    }
+    .pet-summary {
+        order: -1;
+    }
+}
+
+/* ===================================================
+   LANGKAH 2, 3 DAN HALAMAN SUKSES
+   =================================================== */
+
+/* ===== PROGRESS ===== */
+.progress {
+    display: flex;
+    gap: 6px;
+    max-width: 240px;
+    margin-bottom: 16px;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 5px;
+    border-radius: 999px;
+    background-color: var(--border);
+}
+
+.progress-bar.done {
+    background-color: var(--green);
+}
+
+.progress-bar.active {
+    background-color: var(--orange);
+}
+
+/* ===== BARIS DUA KOLOM ===== */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* ===== SELECT, NUMBER, DATE, FILE ===== */
+.form-group select,
+.form-group input[type="number"],
+.form-group input[type="date"] {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--field);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--text);
+    font-size: 13px;
+    padding: 12px 16px;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: var(--green);
+    background-color: white;
+}
+
+.form-group input[type="file"] {
+    border-radius: 14px;
+    padding: 10px 14px;
+    cursor: pointer;
+}
+
+.field-hint {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 6px 0 0 0;
+}
+
+/* ===== FIELDSET, RADIO, CHECKBOX ===== */
+.form-fieldset {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px 18px 8px 18px;
+    margin: 0 0 18px 0;
+}
+
+.form-fieldset legend {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 0 8px;
+}
+
+.option-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+}
+
+.option-list.vertical {
+    flex-direction: column;
+}
+
+.option-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.option-item input[type="radio"],
+.option-item input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    accent-color: var(--green);
+    cursor: pointer;
+}
+
+.option-item label {
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* ===== BARIS TOMBOL ===== */
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.button-row.center {
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.btn-back {
+    display: inline-block;
+    padding: 11px 22px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background-color: white;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn-back:hover {
+    background-color: var(--field);
+}
+
+.btn-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* ===== HALAMAN SUKSES ===== */
+.success-card {
+    max-width: 520px;
+    margin: 40px auto 0 auto;
+    background-color: white;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 40px 32px;
+    text-align: center;
+}
+
+.success-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 16px auto;
+    border-radius: 50%;
+    background-color: var(--green);
+    color: white;
+    font-size: 26px;
+    line-height: 56px;
+}
+
+.success-intro {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .button-row {
+        flex-direction: column-reverse;
+        align-items: stretch;
+        text-align: center;
+    }
+}
+
+/* ===================================================
+   VERSI 1 HALAMAN (JAVASCRIPT)
+   =================================================== */
+
+/* ===== PESAN ERROR VALIDASI ===== */
+.error-msg {
+    color: #b3261e;
+    background-color: #fdecea;
+    border: 1px solid #f5c6c2;
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 1.6;
+    padding: 10px 14px;
+    margin: 0 0 16px 0;
+    white-space: pre-line;
+}
+
+.error-msg:empty {
+    display: none;
+}
+
+/* tombol <button> versi kembali */
+button.btn-back {
+    cursor: pointer;
+}
+
+/* ===== RINGKASAN PENGAJUAN ===== */
+.summary-box {
+    background-color: var(--field);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin-top: 24px;
+    text-align: left;
+}
+
+.summary-box h2 {
+    font-size: 16px;
+    margin: 0 0 12px 0;
+}
+
+.summary-list {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 8px 12px;
+    margin: 0;
+    font-size: 13px;
+}
+
+.summary-list dt {
+    color: var(--muted);
+}
+
+.summary-list dd {
+    margin: 0;
+    font-weight: 600;
+    word-break: break-word;
+}
+
+@media (max-width: 600px) {
+    .summary-list {
+        grid-template-columns: 1fr;
+        gap: 2px;
+    }
+    .summary-list dd {
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    .adopt-page {
+        padding: 28px 14px 0;
+    }
+
+    .adopt-form {
+        padding: 20px 16px;
+    }
+
+    .form-fieldset {
+        padding: 12px 12px 6px;
+    }
+
+    .button-row .btn-back,
+    .button-row .btn-submit {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ===================================================
+   VERSI 1 KALI ISI (TANPA LANGKAH)
+   =================================================== */
+.form-section-title {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--orange);
+    margin: 28px 0 16px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+}
+
+.adopt-form > .form-section-title:first-of-type {
+    margin-top: 0;
+}
+
+.button-row.right {
+    justify-content: flex-end;
+}

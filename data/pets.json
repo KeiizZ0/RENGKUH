@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "nama": "Mochi",
+    "jenis": "Kucing",
+    "ras": "Domestic Shorthair",
+    "umur": "1 tahun",
+    "gender": "Betina",
+    "lokasi": "Bandung",
+    "gambar": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&q=80",
+    "traits": {
+      "tempatTinggal": ["Apartemen", "Rumah tanpa halaman", "Rumah dengan halaman"],
+      "bolehPelihara": true,
+      "waktuSendiri": "Lebih dari 5 jam",
+      "punyaAnak": true,
+      "punyaHewanLain": true,
+      "pengalaman": "Pemula",
+      "budget": "Rp150.000 - Rp350.000",
+      "alasan": "Menemani"
+    }
+  },
+  {
+    "id": 2,
+    "nama": "Mina",
+    "jenis": "Kucing",
+    "ras": "Domestik Hitam",
+    "umur": "5 bulan",
+    "gender": "Betina",
+    "lokasi": "Jakarta Barat",
+    "gambar": "https://images.unsplash.com/photo-1557246565-8a3d3ab5d7f6?w=600&q=80",
+    "traits": {
+      "tempatTinggal": ["Apartemen", "Rumah tanpa halaman", "Rumah dengan halaman"],
+      "bolehPelihara": true,
+      "waktuSendiri": "2 - 5 jam",
+      "punyaAnak": true,
+      "punyaHewanLain": true,
+      "pengalaman": "Pemula",
+      "budget": "Rp150.000 - Rp350.000",
+      "alasan": "Bermain & aktif"
+    }
+  },
+  {
+    "id": 3,
+    "nama": "Kopi",
+    "jenis": "Anjing",
+    "ras": "Anjing Kampung",
+    "umur": "1 tahun",
+    "gender": "Jantan",
+    "lokasi": "Yogyakarta",
+    "gambar": "https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600&q=80",
+    "traits": {
+      "tempatTinggal": ["Rumah tanpa halaman", "Rumah dengan halaman"],
+      "bolehPelihara": true,
+      "waktuSendiri": "2 - 5 jam",
+      "punyaAnak": true,
+      "punyaHewanLain": false,
+      "pengalaman": "Pemula",
+      "budget": "Rp150.000 - Rp350.000",
+      "alasan": "Menjaga rumah"
+    }
+  },
+  {
+    "id": 4,
+    "nama": "Kapas",
+    "jenis": "Kelinci",
+    "ras": "Holland Lop",
+    "umur": "10 bulan",
+    "gender": "Betina",
+    "lokasi": "Bandung",
+    "gambar": "https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=600&q=80",
+    "traits": {
+      "tempatTinggal": ["Apartemen", "Rumah tanpa halaman", "Rumah dengan halaman"],
+      "bolehPelihara": true,
+      "waktuSendiri": "Lebih dari 5 jam",
+      "punyaAnak": true,
+      "punyaHewanLain": false,
+      "pengalaman": "Pemula",
+      "budget": "Rp150.000 - Rp350.000",
+      "alasan": "Menemani"
+    }
+  },
+  {
+    "id": 5,
+    "nama": "Jago",
+    "jenis": "Anjing",
+    "ras": "Siberian Husky",
+    "umur": "1 tahun 6 bulan",
+    "gender": "Jantan",
+    "lokasi": "Malang",
+    "gambar": "https://images.unsplash.com/photo-1605568427561-40dd23c2acea?w=600&q=80",
+    "traits": {
+      "tempatTinggal": ["Rumah dengan halaman"],
+      "bolehPelihara": true,
+      "waktuSendiri": "Kurang dari 2 jam",
+      "punyaAnak": true,
+      "punyaHewanLain": false,
+      "pengalaman": "Berpengalaman",
+      "budget": "Lebih dari Rp500.000",
+      "alasan": "Bermain & aktif"
+    }
+  },
+  {
+    "id": 6,
+    "nama": "Bima",
+    "jenis": "Anjing",
+    "ras": "Golden Retriever Campuran",
+    "umur": "3 tahun",
+    "gender": "Jantan",
+    "lokasi": "Jakarta",
+    "gambar": "https://images.unsplash.com/photo-1552053831-71594a27632d?w=600&q=80",
+    "traits": {
+      "tempatTinggal": ["Rumah tanpa halaman", "Rumah dengan halaman"],
+      "bolehPelihara": true,
+      "waktuSendiri": "2 - 5 jam",
+      "punyaAnak": true,
+      "punyaHewanLain": false,
+      "pengalaman": "Pemula",
+      "budget": "Rp350.000 - Rp500.000",
+      "alasan": "Teman keluarga"
+    }
+  },
+  {
+    "id": 7,
+    "nama": "Salju",
+    "jenis": "Kucing",
+    "ras": "Persia",
+    "umur": "4 tahun",
+    "gender": "Betina",
+    "lokasi": "Surabaya",
+    "gambar": "https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=600&q=80",
+    "traits": {
+      "tempatTinggal": ["Apartemen", "Rumah tanpa halaman", "Rumah dengan halaman"],
+      "bolehPelihara": true,
+      "waktuSendiri": "Lebih dari 5 jam",
+      "punyaAnak": false,
+      "punyaHewanLain": false,
+      "pengalaman": "Pernah memelihara",
+      "budget": "Rp350.000 - Rp500.000",
+      "alasan": "Menemani"
+    }
+  },
+  {
+    "id": 8,
+    "nama": "Gendis",
+    "jenis": "Anjing",
+    "ras": "Beagle",
+    "umur": "9 tahun",
+    "gender": "Betina",
+    "lokasi": "Semarang",
+    "gambar": "https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?w=600&q=80",
+    "traits": {
+      "tempatTinggal": ["Apartemen", "Rumah tanpa halaman", "Rumah dengan halaman"],
+      "bolehPelihara": true,
+      "waktuSendiri": "Lebih dari 5 jam",
+      "punyaAnak": true,
+      "punyaHewanLain": false,
+      "pengalaman": "Pemula",
+      "budget": "Rp150.000 - Rp350.000",
+      "alasan": "Menemani"
+    }
+  },
+  {
+    "id": 9,
+    "nama": "Oreo",
+    "jenis": "Kucing",
+    "ras": "Domestik Abu-Abu",
+    "umur": "2 tahun",
+    "gender": "Jantan",
+    "lokasi": "Depok",
+    "gambar": "https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=600&q=80",
+    "traits": {
+      "tempatTinggal": ["Apartemen", "Rumah tanpa halaman"],
+      "bolehPelihara": true,
+      "waktuSendiri": "2 - 5 jam",
+      "punyaAnak": false,
+      "punyaHewanLain": true,
+      "pengalaman": "Pemula",
+      "budget": "Rp150.000 - Rp350.000",
+      "alasan": "Teman bermain"
+    }
+  },
+  {
+    "id": 10,
+    "nama": "Bruno",
+    "jenis": "Anjing",
+    "ras": "Bulldog",
+    "umur": "2 tahun 6 bulan",
+    "gender": "Jantan",
+    "lokasi": "Tangerang",
+    "gambar": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&q=80",
+    "traits": {
+      "tempatTinggal": ["Rumah dengan halaman"],
+      "bolehPelihara": true,
+      "waktuSendiri": "Kurang dari 2 jam",
+      "punyaAnak": false,
+      "punyaHewanLain": false,
+      "pengalaman": "Berpengalaman",
+      "budget": "Lebih dari Rp500.000",
+      "alasan": "Menjaga rumah"
+    }
+  },
+  {
+    "id": 11,
+    "nama": "Luna",
+    "jenis": "Kucing",
+    "ras": "Maine Coon",
+    "umur": "3 tahun",
+    "gender": "Betina",
+    "lokasi": "Bekasi",
+    "gambar": "https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=600&q=80",
+    "traits": {
+      "tempatTinggal": ["Apartemen", "Rumah dengan halaman"],
+      "bolehPelihara": true,
+      "waktuSendiri": "2 - 5 jam",
+      "punyaAnak": true,
+      "punyaHewanLain": true,
+      "pengalaman": "Berpengalaman",
+      "budget": "Rp350.000 - Rp500.000",
+      "alasan": "Teman keluarga"
+    }
+  },
+  {
+    "id": 12,
+    "nama": "Ciko",
+    "jenis": "Anjing",
+    "ras": "Poodle",
+    "umur": "6 bulan",
+    "gender": "Jantan",
+    "lokasi": "Bandung",
+    "gambar": "https://images.unsplash.com/photo-1598133894008-61f7fdb8cc3a?w=600&q=80",
+    "traits": {
+      "tempatTinggal": ["Apartemen", "Rumah tanpa halaman"],
+      "bolehPelihara": true,
+      "waktuSendiri": "Kurang dari 2 jam",
+      "punyaAnak": true,
+      "punyaHewanLain": true,
+      "pengalaman": "Pemula",
+      "budget": "Rp350.000 - Rp500.000",
+      "alasan": "Bermain & aktif"
+    }
+  },
+  {
+    "id": 13,
+    "nama": "Boba",
+    "jenis": "Kelinci",
+    "ras": "Angora",
+    "umur": "1 tahun",
+    "gender": "Betina",
+    "lokasi": "Surabaya",
+    "gambar": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=600&q=80",
+    "traits": {
+      "tempatTinggal": ["Rumah tanpa halaman", "Rumah dengan halaman"],
+      "bolehPelihara": true,
+      "waktuSendiri": "2 - 5 jam",
+      "punyaAnak": false,
+      "punyaHewanLain": false,
+      "pengalaman": "Pemula",
+      "budget": "Rp150.000 - Rp350.000",
+      "alasan": "Menemani"
+    }
+  },
+  {
+    "id": 14,
+    "nama": "Rocky",
+    "jenis": "Anjing",
+    "ras": "German Shepherd",
+    "umur": "4 tahun",
+    "gender": "Jantan",
+    "lokasi": "Medan",
+    "gambar": "https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=600&q=80",
+    "traits": {
+      "tempatTinggal": ["Rumah dengan halaman"],
+      "bolehPelihara": true,
+      "waktuSendiri": "2 - 5 jam",
+      "punyaAnak": true,
+      "punyaHewanLain": false,
+      "pengalaman": "Berpengalaman",
+      "budget": "Rp350.000 - Rp500.000",
+      "alasan": "Menjaga rumah"
+    }
+  },
+  {
+    "id": 15,
+    "nama": "Kiko",
+    "jenis": "Kucing",
+    "ras": "Bengal",
+    "umur": "1 tahun 2 bulan",
+    "gender": "Jantan",
+    "lokasi": "Jakarta Selatan",
+    "gambar": "https://images.unsplash.com/photo-1618826411640-d6df44dd3f7a?w=600&q=80",
+    "traits": {
+      "tempatTinggal": ["Apartemen"],
+      "bolehPelihara": true,
+      "waktuSendiri": "Lebih dari 5 jam",
+      "punyaAnak": false,
+      "punyaHewanLain": false,
+      "pengalaman": "Berpengalaman",
+      "budget": "Lebih dari Rp500.000",
+      "alasan": "Teman bermain"
+    }
+  },
+  {
+    "id": 16,
+    "nama": "Cimol",
+    "jenis": "Kucing",
+    "ras": "Domestik Oren",
+    "umur": "8 bulan",
+    "gender": "Jantan",
+    "lokasi": "Bogor",
+    "gambar": "https://images.unsplash.com/photo-1543852786-1cf6624b9987?w=600&q=80",
+    "traits": {
+      "tempatTinggal": ["Apartemen", "Rumah tanpa halaman", "Rumah dengan halaman"],
+      "bolehPelihara": true,
+      "waktuSendiri": "2 - 5 jam",
+      "punyaAnak": true,
+      "punyaHewanLain": true,
+      "pengalaman": "Pemula",
+      "budget": "Rp150.000 - Rp350.000",
+      "alasan": "Menemani"
+    }
+  },
+  {
+    "id": 17,
+    "nama": "Milo",
+    "jenis": "Anjing",
+    "ras": "Shiba Inu",
+    "umur": "2 tahun",
+    "gender": "Jantan",
+    "lokasi": "Denpasar",
+    "gambar": "https://images.unsplash.com/photo-1573566023288-4d9b0b9c50d3?w=600&q=80",
+    "traits": {
+      "tempatTinggal": ["Rumah tanpa halaman", "Rumah dengan halaman"],
+      "bolehPelihara": true,
+      "waktuSendiri": "2 - 5 jam",
+      "punyaAnak": true,
+      "punyaHewanLain": false,
+      "pengalaman": "Berpengalaman",
+      "budget": "Rp350.000 - Rp500.000",
+      "alasan": "Teman keluarga"
+    }
+  },
+  {
+    "id": 18,
+    "nama": "Snowy",
+    "jenis": "Kucing",
+    "ras": "British Shorthair",
+    "umur": "2 tahun 4 bulan",
+    "gender": "Betina",
+    "lokasi": "Semarang",
+    "gambar": "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?w=600&q=80",
+    "traits": {
+      "tempatTinggal": ["Apartemen", "Rumah tanpa halaman"],
+      "bolehPelihara": true,
+      "waktuSendiri": "Lebih dari 5 jam",
+      "punyaAnak": true,
+      "punyaHewanLain": false,
+      "pengalaman": "Pemula",
+      "budget": "Rp350.000 - Rp500.000",
+      "alasan": "Menemani"
+    }
+  },
+  {
+    "id": 19,
+    "nama": "Chiko",
+    "jenis": "Anjing",
+    "ras": "Chihuahua",
+    "umur": "1 tahun 8 bulan",
+    "gender": "Jantan",
+    "lokasi": "Yogyakarta",
+    "gambar": "https://images.unsplash.com/photo-1605568427561-40dd23c2acea?w=600&q=80",
+    "traits": {
+      "tempatTinggal": ["Apartemen", "Rumah tanpa halaman"],
+      "bolehPelihara": true,
+      "waktuSendiri": "Kurang dari 2 jam",
+      "punyaAnak": true,
+      "punyaHewanLain": true,
+      "pengalaman": "Pemula",
+      "budget": "Rp150.000 - Rp350.000",
+      "alasan": "Teman bermain"
+    }
+  },
+  {
+    "id": 20,
+    "nama": "Loli",
+    "jenis": "Kelinci",
+    "ras": "Lionhead",
+    "umur": "7 bulan",
+    "gender": "Betina",
+    "lokasi": "Malang",
+    "gambar": "https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=600&q=80",
+    "traits": {
+      "tempatTinggal": ["Apartemen", "Rumah tanpa halaman"],
+      "bolehPelihara": true,
+      "waktuSendiri": "2 - 5 jam",
+      "punyaAnak": true,
+      "punyaHewanLain": true,
+      "pengalaman": "Pemula",
+      "budget": "Rp150.000 - Rp350.000",
+      "alasan": "Teman bermain"
+    }
+  }
+]

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RENGKUH</title>
     <link rel="icon" type="image/x-icon" href="Assets/RENGKUH - LOGO .png">
-    <link rel="stylesheet" href="/Component/components.css">
+    <link rel="stylesheet" href="Component/components.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,30 +13,129 @@
     <!-- ===  NAVBAR === -->
     <nav>
         <div class="nav-content">
-            <img src="../Assets/RENGKUH - LOGO .png" alt="">
-            <a href="../index.html"><h2>RENGKUH</h2></a>
+            <img src="Assets/RENGKUH - LOGO .png" alt="">
+            <a href="index.html"><h2>RENGKUH</h2></a>
         </div>
         <div class="nav-content">
-            <a href="../index.html">Home</a>
-            <a href="../about/about.html">Tentang Rengkuh</a>
-            <a href="../match-quiz/match-quiz.html">Cek Kecocokan</a>
-            <a href="../katalog-pet/pets.html">Adopsi</a>
-            <a href="../donasi/donasi.html">Donasi</a>
-            <a href="../my-pet-tracker/my-pet-tracker.html">Perawatan Harian</a>
+            <a href="index.html">Home</a>
+            <a href="about/about.html">Tentang Rengkuh</a>
+            <a href="match-quiz/match-quiz.html">Cek Kecocokan</a>
+            <a href="katalog-pet/pets.html">Adopsi</a>
+            <a href="donasi/donasi.html">Donasi</a>
+            <a href="my-pet-tracker/my-pet-tracker.html">Perawatan Harian</a>
         </div>
         <div class="nav-content">
             <div class="masuk" id="nav-auth">
-                <a href="../auth/login.html">Masuk</a>
+                <a href="auth/login.html">Masuk</a>
             </div>
         </div>
     </nav>
-    <script src="../JavaScript/navbar.js"></script>
+    <script src="JavaScript/navbar.js"></script>
 
     <!-- ==== START PAGE ==== -->
 
+    <main>
 
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-text">
+                <p class="eyebrow">Adopsi yang bertanggung jawab</p>
+                <h1>Setiap hewan layak punya <span class="accent">pelukan</span> untuk pulang.</h1>
+                <p class="hero-desc">
+                    Rengkuh menghubungkan hewan dari penampungan mitra dengan keluarga yang tepat,
+                    lewat kuesioner kecocokan, profil yang transparan, dan pendampingan perawatan harian.
+                </p>
+                <div class="hero-buttons">
+                    <a href="match-quiz/match-quiz.html" class="btn btn-primary">Cek Kecocokan &rarr;</a>
+                    <a href="katalog-pet/pets.html" class="btn btn-outline">Lihat Katalog</a>
+                </div>
+                <div class="stats">
+                    <div class="stat">
+                        <strong>1.420+</strong>
+                        <span>Hewan teradopsi</span>
+                    </div>
+                    <div class="stat">
+                        <strong>48</strong>
+                        <span>Penampungan mitra</span>
+                    </div>
+                    <div class="stat">
+                        <strong>12</strong>
+                        <span>Kota terjangkau</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://media.istockphoto.com/id/1058255610/photo/indian-woman-with-her-beloved-pet.jpg?s=612x612&w=0&k=20&c=g3cAy42paAxRV2xR02gOq3fJqe7Vm3mYrDFPJ4DkylE=" alt="Seorang perempuan memeluk anjing dan kucing" onerror="this.src='Assets/RENGKUH - LOGO .png'">
+                <div class="hero-badge">
+                    <strong>Pendampingan 30 hari</strong>
+                    <span>Setelah adopsi, kami temani prosesnya.</span>
+                </div>
+            </div>
+        </section>
 
-    
+        <!-- KEUNGGULAN -->
+        <section class="features">
+            <div class="section-inner">
+                <p class="eyebrow">Kenapa Rengkuh</p>
+                <h2 class="section-title">Adopsi yang terencana,<br>bukan sekadar impulsif.</h2>
+
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon icon-green">1</div>
+                        <h3>Kuesioner Kecocokan</h3>
+                        <p>Jawab beberapa pertanyaan tentang rumah dan gaya hidupmu, lalu lihat hewan yang paling cocok.</p>
+                        <a href="match-quiz/match-quiz.html">Coba sekarang &rarr;</a>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon icon-orange">2</div>
+                        <h3>Transparansi Penuh</h3>
+                        <p>Riwayat kesehatan, karakter, dan kebutuhan setiap hewan ditampilkan apa adanya.</p>
+                        <a href="katalog-pet/pets.html">Lihat katalog &rarr;</a>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon icon-green">3</div>
+                        <h3>Daily Care Tracker</h3>
+                        <p>Catat makan, minum, dan jadwal vaksin supaya perawatan hewanmu tetap teratur.</p>
+                        <a href="my-pet-tracker/my-pet-tracker.html">Pelajari &rarr;</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- HEWAN UNGGULAN -->
+        <section class="featured">
+            <div class="section-inner">
+                <p class="eyebrow">Siap diadopsi</p>
+                <div class="featured-header">
+                    <h2 class="section-title">Hewan unggulan minggu ini</h2>
+                    <div class="filter-form">
+                        <label for="filter-hewan">Tampilkan:</label>
+                        <select name="jenis" id="filter-hewan">
+                            <option value="">Semua hewan</option>
+                            <option value="kucing">Kucing</option>
+                            <option value="anjing">Anjing</option>
+                            <option value="kelinci">Kelinci</option>
+                        </select>
+                    </div>
+                </div>
+
+                <p class="pet-status" id="pet-status" aria-live="polite">Memuat data hewan...</p>
+                <div class="pet-grid" id="home-pet-grid"></div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <div class="cta-box">
+                <div class="cta-text">
+                    <h2>Belum yakin hewan mana yang cocok?</h2>
+                    <p>Isi kuesioner singkat, dan kami carikan hewan yang sesuai dengan rumah dan gaya hidupmu.</p>
+                </div>
+                <a href="match-quiz/match-quiz.html" class="btn btn-light">Mulai Kuesioner</a>
+            </div>
+        </section>
+
+    </main>
 
     <!-- ==== END PAGE ==== -->
 
@@ -46,8 +145,8 @@
         
           <div class="footer-brand">
             <div class="brand-logo-wrapper">
-                <img src="../Assets/RENGKUH - LOGO .png" alt="Logo Rengkuh" class="footer-logo">
-                <span class="brand-text"><a href="../index.html">RENGKUH</a></span>
+                <img src="Assets/RENGKUH - LOGO .png" alt="Logo Rengkuh" class="footer-logo">
+                <span class="brand-text"><a href="index.html">RENGKUH</a></span>
             </div>
             <p class="footer-desc">
               Merengkuh mereka yang menunggu rumah. Kami menghubungkan hewan dari penampungan mitra dengan keluarga yang tepat.
@@ -57,11 +156,11 @@
           <div class="footer-links">
             <h4>Jelajahi</h4>
             <ul>
-              <li><a href="../about/about.html">Tentang Rengkuh</a></li>
-              <li><a href="../match-quiz/match-quiz.html">Kuesioner Kecocokan</a></li>
-              <li><a href="../katalog-pet/pets.html">Katalog Adopsi</a></li>
-              <li><a href="../donasi/donasi.html">Donasi</a></li>
-              <li><a href="../my-pet-tracker/my-pet-tracker.html">Daily Care Tracker</a></li>
+              <li><a href="about/about.html">Tentang Rengkuh</a></li>
+              <li><a href="match-quiz/match-quiz.html">Kuesioner Kecocokan</a></li>
+              <li><a href="katalog-pet/pets.html">Katalog Adopsi</a></li>
+              <li><a href="donasi/donasi.html">Donasi</a></li>
+              <li><a href="my-pet-tracker/my-pet-tracker.html">Daily Care Tracker</a></li>
 
             </ul>
           </div>
@@ -98,5 +197,6 @@
           <p>&copy; 2026 Rengkuh. Dibuat dengan sayang untuk setiap ekor yang menunggu.</p>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

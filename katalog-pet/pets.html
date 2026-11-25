@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RENGKUH</title>
     <link rel="icon" type="image/x-icon" href="../Assets/RENGKUH - LOGO .png">
-    <link rel="stylesheet" href="/Component/components.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../Component/components.css">
+    <link rel="stylesheet" href="Catalog.css">
+
 </head>
 <body>
 
@@ -30,14 +31,113 @@
             </div>
         </div>
     </nav>
-    <script src="../JavaScript/navbar.js"></script>
+    <script src="Catalog.js"></script>
 
     <!-- ==== START PAGE ==== -->
-
-
-
     
+    <main class="container">
 
+      <section class="hero-header">
+        <div>
+          <p class="sub-label">KATALOG ADOPSI</p>
+          <h1>Mereka sedang menunggumu</h1>
+        </div>
+        <a href="../match-quiz/match-quiz.html" class="btn-outline">Cek kecocokan dulu</a>
+      </section>
+
+      <section class="search-bar">
+        <input type="search" placeholder="Cari nama, ras, atau kota..." class="input-cari">
+        <select class="select-urut">
+          <option value="terbaru" selected>Terbaru</option>
+          <option value="termurah">Biaya Terendah</option>
+          <option value="termahal">Biaya Tertinggi</option>
+        </select>
+      </section>
+
+      <div class="main-layout">
+
+        <aside class="sidebar-filter">
+          <div class="filter-top">
+            <h2>Filter</h2>
+            <a href="#" class="reset-link">Atur ulang</a>
+          </div>
+
+          <form>
+            <div class="filter-group">
+              <h4>JENIS HEWAN</h4>
+              <ul class="checkbox-list">
+                <li><label><input type="checkbox"> Kucing</label></li>
+                <li><label><input type="checkbox"> Anjing</label></li>
+                <li><label><input type="checkbox"> Kelinci</label></li>
+              </ul>
+            </div>
+
+            <div class="filter-group">
+              <h4>USIA</h4>
+              <div class="pill-buttons">
+                <button type="button">Anak</button>
+                <button type="button">Dewasa</button>
+                <button type="button">Senior</button>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <h4>UKURAN</h4>
+              <div class="pill-buttons">
+                <button type="button">Kecil</button>
+                <button type="button">Sedang</button>
+                <button type="button">Besar</button>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <h4>JENIS KELAMIN</h4>
+              <select class="filter-select">
+                <option selected>Semua</option>
+                <option>Jantan</option>
+                <option>Betina</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <h4>TINGKAT ENERGI</h4>
+              <select class="filter-select">
+                <option selected>Semua</option>
+                <option>Rendah</option>
+                <option>Sedang</option>
+                <option>Tinggi</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <h4>BIAYA BULANAN</h4>
+              <select class="filter-select">
+                <option selected>Semua</option>
+                <option>Di bawah Rp 500.000</option>
+                <option>Rp 500.000 - Rp 1.000.000</option>
+                <option>Di atas Rp 1.000.000</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <h4>KECOCOKAN RUMAH</h4>
+              <ul class="checkbox-list">
+                <li><label><input type="checkbox"> Ramah anak</label></li>
+                <li><label><input type="checkbox"> Akur dengan hewan lain</label></li>
+                <li><label><input type="checkbox"> Cocok di apartemen</label></li>
+              </ul>
+            </div>
+          </form>
+        </aside>
+
+        <section class="catalog-area">
+          <p class="result-count">Memuat data hewan...</p>
+          <div class="cards-grid"></div>
+        </section>
+
+      </div>
+    </main>
+    <script src="Catalog.js"></script>
     <!-- ==== END PAGE ==== -->
 
     <!-- === FOOTER === -->
@@ -62,7 +162,6 @@
               <li><a href="../katalog-pet/pets.html">Katalog Adopsi</a></li>
               <li><a href="../donasi/donasi.html">Donasi</a></li>
               <li><a href="../my-pet-tracker/my-pet-tracker.html">Daily Care Tracker</a></li>
-
             </ul>
           </div>
       

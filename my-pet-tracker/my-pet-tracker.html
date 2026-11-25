@@ -33,8 +33,144 @@
     <script src="../JavaScript/navbar.js"></script>
 
     <!-- ==== START PAGE ==== -->
+    
+    <main class="container">
+    
+    <!-- Form isi Data hewan -->
+    <section id="bagian-form" class="hidden">
+      <div class="text-center mb-4"> <!-- mb-1 = 6px-->
+        <p class="subtitle">RUANG PERAWATAN</p>
+        <h1 class="title">Kenalan dengan hewanmu</h1>
+        <p class="desc">Isi data hewan yang kamu rawat dahulu. Data tersimpan di perangkatmu.</p>
+      </div>
+    
+      <div class="form card">
+        <form id="form-hewan">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="namaHewan">Nama hewan</label>
+              <input type="text" id="namaHewan" placeholder="Contoh : Mochi" required>
+            </div>
+          
+            <div class="form-group">
+              <label for="jenisHewan">Jenis hewan</label>
+              <select name="jenis" id="jenisHewan" required>
+                <option value="Kucing">Kucing</option>
+                <option value="Anjing">Anjing</option>
+                <option value="Kelinci">Kelinci</option>
+                <option value="Lainnya">Lainnya</option>
+              </select>
+            </div>
+          </div>
+        
+          <div class="form-row">
+            <div class="form-group">
+              <label for="rasHewan">Ras / Jenis</label>
+              <input type="text" id="rasHewan" placeholder="Contoh: Domestik" required>
+            </div>
+          
+            <div class="form-group">
+              <label for="usiaHewan">Usia (Bulan)</label>
+              <input type="number" id="usiaHewan" placeholder="12" required>
+            </div>
+          </div>
+        
+          <div class="form-group">
+              <label for="fotoHewan">URL foto hewan (optional)</label>
+              <input type="url" id="fotoHewan" placeholder="https://...">
+          </div>
+        
+          <button type="submit" class="btn-primary">
+             <span class="icon">💾</span> Simpan data hewan
+          </button>
+        
+        </form>
+      </div>
+    </section>
+  
+    <!-- Dashboard Pet pet-tracker -->
+  
+    <section id="bagian-dashboard" class="hidden">
+      <div class="text-center mb-4">
+        <img id="foto-profil" src="https://placehold.co/150x150" alt="Foto Hewan" class="foto-profil">
+        <h1 id="sapaan-hewan" class="title">Hari baik bersamamu</h1>
+        <p id="detail-hewan" class="desc">Kucing • Domestik • 1 tahun</p>
+        <button id="btn-edit" class="btn-text">✏️ Edit data hewan</button>
+      </div>
+      
+      <!-- bagian perawatan -->
+      <div class="dashboard-grid">
+      
+        <!--Bagian kolom kiri-->
+        <div class="dashboard-col">
+          
+          <!-- Kotak Checklist Harian -->
+          <div class="section-card">
+            <div class="card-header">
+              <div>
+                <p class="subtitle" id="tanggal-hari-ini">MINGGU, 25 OKTOBER</p>
+                <h2 class="card-title">Checklist harian</h2>
+              </div>
+              <span id="persentase-checklist" class="badge">0/4 selesai</span>
+            </div>
+          
+            <div class="checklist-container">
+              <label class="checklist-item"><input type="checkbox" value="Makan Pagi">Makan pagi</label>
+              <label class="checklist-item"><input type="checkbox" value="Bersihkan 15 menit"> Bersihkan 15 menit</label>
+              <label class="checklist-item"><input type="checkbox" value="Bersihkan area tidur"> Bersihkan area tidur</label>
+              <label class="checklist-item"><input type="checkbox" value="Makan malam"> Makan malam</label>
+            </div>
+          
+            <div class="progress-bar-bg mt-4">
+                  <div class="progress-bar-fill" id="progress-harian"></div>
+            </div>
+            <p class="progress-text">Asupan hari ini: <span id="teks-progress">0 / 2 porsi</span></p>
+          </div>
+        
+          <!-- Kotak Log Kesehatan -->
+          <div class="section-card mt-4">
+            <p class="subtitle">CATATAN</p>
+            <h2 class="card-title">Log kesehatan</h2>
+            <textarea id="logKesehatan" placeholder="Tulis catatan tentang hewanmu..."></textarea>
+            <button id="btn-simpan-log" class="btn-primary mt-2">
+              <span class="icon">💾</span> Simpan catatan
+            </button>
+          </div>
+        
+        </div>
+      
+        <!--Bagian kolom kanan-->
+        <div class="dashboard-col">
+          
+          <!-- Todo Tambahan -->
+          <div class="section-card">
+            <p class="subtitle">TODO TAMBAHAN</p>
+            <h2 class="card-title">Hal kecil hari ini</h2>
+            <div class="todo-input-group">
+              <input type="text" id="input-todo" placeholder="Contoh: Beli pasir kucing">
+              <button id="btn-tambah-todo" class="btn-icon">+</button>
+            </div>
+            <ul id="list-todo" class="todo-list">
+              <li class="empty-text">Belum ada todo tambahan.</li>
+            </ul>
+          </div>
+        
+          <!-- Kotak Tips Hijau -->
+          <div class="section-card bg-hijau mt-4">
+            <h2 class="card-title text-white">Tips hari ini</h2>
+            <h3 class="text-white mt-2">Perhatian kecil berarti besar.</h3>
+            <p class="text-light">Sempatkan waktu tanpa distraksi untuk menemani hewanmu.</p>
+          </div>
+        
+        </div>
+      
+      </div>
+    </section>
+  
+    </main>
 
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="my-pet-tracker.js"></script>
 
     
 

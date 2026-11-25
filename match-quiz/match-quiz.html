@@ -34,7 +34,47 @@
 
     <!-- ==== START PAGE ==== -->
 
+    <main class="quiz-container">
 
+      <!-- header quiz-->
+      <div class="quiz-header">
+        <p class="quiz-subtitle">KUESIONER KECOCOKAN</p>
+        <h1>Mari Kenali gaya hidupmu</h1>
+        <p>tidak ada jawaban benar atau salah. Jawab sejujurnya agar rekomendasi kami tepat.</p>
+
+        <div class="progress-container">
+          <span id="teks-progress">Pertanyaan 1 dari 8</span>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-isi" id="progress-isi"></div>
+          </div>
+        </div>
+      </div>  
+
+      <section id="bagian-kuesioner" class="quiz-card">
+        <h2 id="teks-pertanyaan">Memuat Pertanyaan</h2>
+        <div id="container-opsi" class="quiz-options">
+
+        </div>
+        <div class="quiz-footer">
+          <button id="tombol-lanjut" class="btn-primary" disabled>Lanjut →</button>
+        </div>
+      </section>
+
+      <section id="bagian-hasil" class="hidden">
+        <div class="hasil-profil-card">
+          <h3>Ini profil adopsimu</h3>
+          <p>Kami merangkum hasil jawabanmu untuk memudahkanmu.</p>
+          <div id="ringkasan-profil" class="hasil-ringkasan"></div>
+        </div>
+
+        <h2 class="hasil-judul">Paling cocok untukmu</h2>
+        <div id="container-hewan" class="hasil-hewan-grid"></div>
+        <button id="tombol-ulangi" class="btn-secondary">↻ Ulangi kuesioner</button>
+      </section>
+
+    </main>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="match-quiz.js"></script>
 
     
 

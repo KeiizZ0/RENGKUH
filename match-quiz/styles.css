@@ -1,0 +1,358 @@
+/* BODY & CONTAINER */
+body {
+    background-color: #f7f5ec;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.quiz-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* HEADER KUESIONER */
+.quiz-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.quiz-subtitle {
+    color: #c98a4b;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.quiz-header h1 {
+    font-size: 32px;
+    color: #1d3b2a;
+    margin: 0 0 12px;
+    font-family: Georgia, serif;
+}
+
+.quiz-header p {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* PROGRESS BAR */
+.progress-container {
+    margin-top: 24px;
+    text-align: left;
+    font-size: 13px;
+    color: #555;
+}
+
+.progress-bar-bg {
+    background: #e0ddd0;
+    height: 4px;
+    border-radius: 2px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.progress-bar-isi {
+    background: #1d3b2a;
+    height: 100%;
+    width: 12.5%;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+/* KARTU KUESIONER */
+.quiz-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.quiz-card h2 {
+    font-size: 20px;
+    color: #1d3b2a;
+    margin: 0 0 24px;
+}
+
+/* DAFTAR OPSI JAWABAN */
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.quiz-option-btn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 16px;
+    background: transparent;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+    font-size: 14px;
+    color: #333;
+    transition: all 0.2s ease;
+}
+
+.quiz-option-btn:hover {
+    border-color: #1d3b2a;
+    background-color: #f5f8f6;
+}
+
+.quiz-option-btn.selected {
+    border-color: #1d3b2a;
+    background-color: #eef4f0;
+}
+
+.quiz-option-icon {
+    margin-right: 16px;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.quiz-option-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.quiz-option-text strong {
+    font-size: 14px;
+    color: #1d3b2a;
+    margin-bottom: 4px;
+}
+
+.quiz-option-text span {
+    font-size: 12px;
+    color: #777;
+}
+
+/* FOOTER KUESIONER (TOMBOL) */
+.quiz-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
+}
+
+.btn-primary {
+    background: #1d3b2a;
+    color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn-primary:hover {
+    background: #2a5440;
+}
+
+.btn-primary:disabled {
+    background: #c5c5c5;
+    cursor: not-allowed;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #1d3b2a;
+    padding: 12px 24px;
+    border: 1px solid #1d3b2a;
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 24px;
+}
+
+.btn-secondary:hover {
+    background: #eef4f0;
+}
+
+/* UTILITAS */
+.hidden {
+    display: none;
+}
+
+/* BAGIAN HASIL: KARTU PROFIL (KOTAK HIJAU) */
+.hasil-profil-card {
+    background: #1d3b2a;
+    color: #ffffff;
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 40px;
+}
+
+.hasil-profil-card h3 {
+    margin: 0 0 8px;
+    font-size: 20px;
+    color: #f7f5ec;
+}
+
+.hasil-profil-card > p {
+    margin: 0 0 20px;
+    font-size: 13px;
+    color: #cfe0d5;
+}
+
+.hasil-ringkasan {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.hasil-ringkasan-item {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.hasil-ringkasan-item small {
+    font-size: 11px;
+    color: #a8c4b3;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.hasil-ringkasan-item p {
+    margin: 0;
+    font-size: 13px;
+    color: #ffffff;
+}
+
+/* BAGIAN HASIL: GRID KARTU HEWAN */
+.hasil-judul {
+    font-size: 20px;
+    color: #1d3b2a;
+    margin: 0 0 16px;
+}
+
+.hasil-hewan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.hewan-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.hewan-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.hewan-info {
+    padding: 16px;
+}
+
+.hewan-badge {
+    display: inline-block;
+    background: #eef4f0;
+    color: #1d3b2a;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+}
+
+.hewan-info h3 {
+    margin: 0 0 4px;
+    font-size: 18px;
+    color: #1d3b2a;
+}
+
+.hewan-info p {
+    margin: 0 0 4px;
+    font-size: 12px;
+    color: #666;
+}
+
+.hewan-info .hewan-lokasi {
+    color: #999;
+    font-size: 11px;
+    margin-bottom: 12px;
+}
+
+.btn-adopt {
+    background: #1d3b2a;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 16px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-adopt:hover {
+    background: #2a5440;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .quiz-container {
+        margin: 28px auto;
+        padding: 0 14px;
+    }
+
+    .quiz-header {
+        margin-bottom: 24px;
+    }
+
+    .quiz-card {
+        padding: 20px 16px;
+    }
+
+    .quiz-header h1 {
+        font-size: clamp(25px, 7vw, 32px);
+    }
+
+    .quiz-card h2 {
+        font-size: 18px;
+    }
+
+    .quiz-option-btn {
+        align-items: flex-start;
+        padding: 13px 12px;
+    }
+
+    .quiz-option-icon {
+        margin-right: 10px;
+    }
+
+    .quiz-footer .btn-primary,
+    #tombol-ulangi {
+        width: 100%;
+    }
+
+    .hasil-ringkasan {
+        grid-template-columns: 1fr;
+    }
+
+    .hasil-profil-card {
+        padding: 22px 18px;
+    }
+
+    .hasil-hewan-grid {
+        grid-template-columns: 1fr;
+    }
+}

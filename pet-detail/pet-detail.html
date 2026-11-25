@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RENGKUH</title>
     <link rel="icon" type="image/x-icon" href="../Assets/RENGKUH - LOGO .png">
-    <link rel="stylesheet" href="/Component/components.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Detail.css">
+    <link rel="stylesheet" href="Detail.css">
 </head>
 <body>
 
@@ -30,14 +30,180 @@
             </div>
         </div>
     </nav>
-    <script src="../JavaScript/navbar.js"></script>
+    <script src="Detail.js"></script>
 
     <!-- ==== START PAGE ==== -->
+    <main class="container">
 
+      <div class="breadcrumb">
+        <a href="../index.html">Beranda</a>
+        <p>&rsaquo;</p>
+        <a href="pets.html">Katalog</a>
+        <p>&rsaquo;</p>
+        <p class="current" id="crumb-nama">Memuat...</p>
+      </div>
 
+      <section class="detail-top">
 
-    
+        <div class="gallery-col">
+          <div class="main-photo-box">
+            <img src="" alt="Foto Hewan" id="foto-utama" class="main-photo">
 
+            <div class="gallery-controls">
+              <button type="button" id="btn-prev" class="arrow-btn">&lsaquo;</button>
+              <p id="foto-counter" class="photo-counter">1 / 1</p>
+              <button type="button" id="btn-next" class="arrow-btn">&rsaquo;</button>
+            </div>
+          </div>
+
+          <div class="thumbnail-row" id="thumbnail-row"></div>
+        </div>
+
+        <div class="info-col">
+          <div class="top-badges">
+            <p class="pill-badge" id="detail-jenis">-</p>
+            <p class="pill-badge" id="detail-kota">-</p>
+          </div>
+
+          <h1 id="detail-nama">-</h1>
+          <p class="breed-subtitle" id="detail-ras">-</p>
+
+          <div class="quick-stats">
+            <div class="stat-box">
+              <h5>Usia</h5>
+              <p id="detail-usia">-</p>
+            </div>
+            <div class="stat-box">
+              <h5>Tahap</h5>
+              <p id="detail-tahap">-</p>
+            </div>
+            <div class="stat-box">
+              <h5>Kelamin</h5>
+              <p id="detail-kelamin">-</p>
+            </div>
+            <div class="stat-box">
+              <h5>Ukuran</h5>
+              <p id="detail-ukuran">-</p>
+            </div>
+          </div>
+
+          <p class="description" id="detail-deskripsi">-</p>
+
+          <div class="trait-tags" id="detail-sifat-tags"></div>
+
+          <div class="adopt-banner">
+            <div>
+              <p class="adopt-label">Biaya adopsi</p>
+              <h2 id="detail-biaya">Rp 0</h2>
+              <p class="adopt-note">Sudah termasuk vaksin awal &amp; pemeriksaan dokter</p>
+            </div>
+            <button type="button" id="btn-adopsi" class="btn-adopsi">Adopsi Sekarang</button>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="three-cards">
+
+        <div class="detail-card">
+          <h3>Profil sifat</h3>
+
+          <div class="energy-header">
+            <p>Tingkat energi</p>
+            <strong id="detail-energi-teks">-</strong>
+          </div>
+
+          <div class="energy-bars" id="detail-energi-bar"></div>
+
+          <ul class="check-list" id="list-kecocokan"></ul>
+        </div>
+
+        <div class="detail-card">
+          <h3>Kesehatan</h3>
+
+          <ul class="check-list" id="list-kesehatan"></ul>
+
+          <div class="doctor-note">
+            <p><strong>Catatan dokter:</strong></p>
+            <p id="detail-catatan">-</p>
+          </div>
+        </div>
+
+        <div class="detail-card">
+          <h3>Kalkulator biaya</h3>
+
+          <h4>Kualitas pakan</h4>
+          <div class="pakan-tabs">
+            <button type="button" class="pakan-btn" data-harga="100000">Ekonomi</button>
+            <button type="button" class="pakan-btn aktif" data-harga="160000">Standar</button>
+            <button type="button" class="pakan-btn" data-harga="250000">Premium</button>
+          </div>
+
+          <h4>Tambahan</h4>
+          <ul class="addon-list">
+            <li>
+              <label><input type="checkbox" class="addon-check" value="100000"> Grooming profesional</label>
+              <p>+Rp 100.000</p>
+            </li>
+            <li>
+              <label><input type="checkbox" class="addon-check" value="75000"> Tabungan dana darurat</label>
+              <p>+Rp 75.000</p>
+            </li>
+            <li>
+              <label><input type="checkbox" class="addon-check" value="90000"> Asuransi hewan</label>
+              <p>+Rp 90.000</p>
+            </li>
+          </ul>
+
+          <div class="slider-header">
+            <label for="durasi-slider">Durasi perkiraan</label>
+            <strong id="label-durasi">12 bulan</strong>
+          </div>
+          <input type="range" id="durasi-slider" min="1" max="24" value="12" class="range-slider">
+
+          <div class="cost-summary">
+            <div class="monthly-row">
+              <p>Per bulan</p>
+              <h2 id="total-bulanan">Rp 300.000</h2>
+            </div>
+
+            <div class="breakdown-row">
+              <p>Pakan</p>
+              <p id="biaya-pakan">Rp 160.000</p>
+            </div>
+            <div class="breakdown-row">
+              <p>Pasir &amp; perawatan</p>
+              <p>Rp 60.000</p>
+            </div>
+            <div class="breakdown-row">
+              <p>Kesehatan rutin</p>
+              <p>Rp 80.000</p>
+            </div>
+            <div class="breakdown-row" id="row-tambahan" style="display: none;">
+              <p>Tambahan pilihan</p>
+              <p id="biaya-tambahan">Rp 0</p>
+            </div>
+            <div class="breakdown-row">
+              <p>Biaya adopsi + perlengkapan awal (sekali)</p>
+              <p id="biaya-awal-teks">Rp 650.000</p>
+            </div>
+
+            <div class="total-first-row">
+              <p id="label-total-durasi">Total 12 bulan pertama</p>
+              <strong id="total-keseluruhan">Rp 4.250.000</strong>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="related-section">
+        <h2 id="related-title">Hewan lain yang menunggu</h2>
+        <div class="related-grid" id="related-grid"></div>
+      </section>
+
+    </main>
+    <script src="detail.js"></script>
     <!-- ==== END PAGE ==== -->
 
     <!-- === FOOTER === -->

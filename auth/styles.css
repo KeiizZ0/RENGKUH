@@ -120,6 +120,45 @@ input:focus {
     border-color: #2F3E46;
 }
 
+@media (max-width: 900px) {
+    .container {
+        height: auto;
+        min-height: calc(100vh - 90px);
+        padding: 36px 20px;
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .img-container,
+    .form-container {
+        width: min(100%, 420px);
+    }
+
+    .img-container {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 24px 16px;
+        gap: 22px;
+    }
+
+    .img-container {
+        height: 240px;
+        border-radius: 18px;
+    }
+
+    .img-text {
+        margin: 18px;
+    }
+
+    .form-container h1 {
+        font-size: 26px;
+    }
+}
+
 .pesan{
     text-align: center;
     margin: 0;

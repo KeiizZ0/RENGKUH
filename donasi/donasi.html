@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RENGKUH</title>
+    <title>Donasi | RENGKUH</title>
     <link rel="icon" type="image/x-icon" href="../Assets/RENGKUH - LOGO .png">
-    <link rel="stylesheet" href="/Component/components.css">
+    <link rel="stylesheet" href="../Component/components.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- ===  NAVBAR === -->
+    <!-- === NAVBAR === -->
     <nav>
         <div class="nav-content">
-            <img src="../Assets/RENGKUH - LOGO .png" alt="">
+            <img src="../Assets/RENGKUH - LOGO .png" alt="Logo Rengkuh">
             <a href="../index.html"><h2>RENGKUH</h2></a>
         </div>
         <div class="nav-content">
@@ -32,13 +32,240 @@
     </nav>
     <script src="../JavaScript/navbar.js"></script>
 
-    <!-- ==== START PAGE ==== -->
+    <!-- ==== MULAI HALAMAN ==== -->
+    <main class="donasi-page">
+        <div class="container-figma">
+            
+            <!-- LANGKAH 1: HANYA KATA-KATA & TOMBOL DONASI -->
+            <div id="step-awal" class="donasi-intro">
+                <span class="eyebrow">DONASI RENGKUH</span>
+                <h1 class="donasi-title">
+                    Satu langkah kecil darimu,<br>
+                    harapan baru bagi mereka.
+                </h1>
+                <p class="donasi-desc">
+                    Bantu kami merawat, memberi makan, dan mencarikan rumah yang layak bagi ratusan hewan terlantar di penampungan mitra Rengkuh.
+                </p>
+                <button type="button" id="btn-mulai-donasi" class="btn-cta-orange">
+                    Donasi
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </button>
+            </div>
 
+            <!-- LANGKAH 2: MUNCUL 3 PILIHAN SETELAH TOMBOL DONASI DIKLIK -->
+            <div id="step-pilihan" class="donasi-pilihan-section hidden">
+                <div class="pilihan-header text-center">
+                    <span class="eyebrow">PILIH JENIS BANTUAN</span>
+                    <h2 class="section-heading">Bagaimana kamu ingin membantu hari ini?</h2>
+                </div>
 
+                <!-- 3 PILIHAN UTAMA -->
+                <div class="pilihan-grid">
+                    <!-- Pilihan 1: Donasi Hewan -->
+                    <label class="pilihan-card">
+                        <input type="radio" name="jenis_donasi" value="Donasi Hewan">
+                        <div class="card-content">
+                            <div class="pilihan-icon icon-green">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                            </div>
+                            <h3>Donasi Hewan</h3>
+                            <span class="card-underline"></span>
+                            <p>Menyerahkan anjing atau kucing yang membutuhkan perlindungan dan keluarga baru ke shelter mitra.</p>
+                        </div>
+                    </label>
 
-    
+                    <!-- Pilihan 2: Merawat Hewan -->
+                    <label class="pilihan-card">
+                        <input type="radio" name="jenis_donasi" value="Merawat Hewan">
+                        <div class="card-content">
+                            <div class="pilihan-icon icon-orange">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+                            </div>
+                            <h3>Merawat Hewan</h3>
+                            <span class="card-underline"></span>
+                            <p>Menyumbangkan pakan, vitamin, obat-obatan, atau perlengkapan kebersihan kandang secara langsung.</p>
+                        </div>
+                    </label>
 
-    <!-- ==== END PAGE ==== -->
+                    <!-- Pilihan 3: Uang -->
+                    <label class="pilihan-card">
+                        <input type="radio" name="jenis_donasi" value="Uang">
+                        <div class="card-content">
+                            <div class="pilihan-icon icon-brown">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>
+                            </div>
+                            <h3>Uang</h3>
+                            <span class="card-underline"></span>
+                            <p>Dukungan dana fleksibel untuk kebutuhan kesehatan, kebersihan, dan operasional penampungan mitra.</p>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- FORM KHUSUS PILIHAN 1 (DONASI HEWAN: ANJING & KUCING) -->
+                <div id="form-hewan-box" class="nominal-card hidden">
+                    <label class="input-label">
+                        Pilih Jenis Hewan untuk <span class="text-orange">Donasi Hewan</span>
+                    </label>
+
+                    <div class="hewan-grid">
+                        <label class="hewan-option">
+                            <input type="radio" name="pilih_hewan" value="Anjing">
+                            <div class="hewan-card">
+                                <div class="hewan-icon">🐕</div>
+                                <div>
+                                    <h4>Anjing</h4>
+                                    <p>Penyerahan anjing untuk dirawat & dicarikan adopter.</p>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="hewan-option">
+                            <input type="radio" name="pilih_hewan" value="Kucing">
+                            <div class="hewan-card">
+                                <div class="hewan-icon">🐈</div>
+                                <div>
+                                    <h4>Kucing</h4>
+                                    <p>Penyerahan kucing untuk dirawat & dicarikan adopter.</p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div id="detail-hewan-fields" class="detail-fields hidden">
+                        <div class="field-group">
+                            <label for="kondisi-hewan" class="sub-label">Keterangan Singkat (Umur / Kondisi / Lokasi Penjemputan)</label>
+                            <textarea id="kondisi-hewan" rows="2" placeholder="Contoh: Kucing kampung usia ±6 bulan, sehat, lokasi di Bandung..."></textarea>
+                        </div>
+                        <div class="field-group">
+                            <label for="kontak-donatur" class="sub-label">Nomor WhatsApp yang Bisa Dihubungi</label>
+                            <input type="tel" id="kontak-donatur" placeholder="Contoh: 081234567890">
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button type="button" class="btn-back btn-kembali-awal">← Kembali</button>
+                        <button type="button" id="btn-submit-hewan" class="btn-cta-orange" disabled>
+                            Pilih Anjing atau Kucing
+                        </button>
+                    </div>
+                </div>
+
+                <!-- FORM KHUSUS PILIHAN 2 (MERAWAT HEWAN) -->
+                <div id="form-merawat-box" class="nominal-card hidden">
+                    <label class="input-label">
+                        Pilih Jenis Perlengkapan untuk <span class="text-orange">Merawat Hewan</span>
+                    </label>
+
+                    <div class="barang-grid">
+                        <label class="hewan-option">
+                            <input type="radio" name="pilih_barang" value="Pakan & Nutrisi">
+                            <div class="hewan-card">
+                                <div class="hewan-icon">🥣</div>
+                                <div>
+                                    <h4>Pakan & Nutrisi</h4>
+                                    <p>Dry food, wet food, atau susu khusus anak hewan.</p>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="hewan-option">
+                            <input type="radio" name="pilih_barang" value="Vitamin & Obat">
+                            <div class="hewan-card">
+                                <div class="hewan-icon">💊</div>
+                                <div>
+                                    <h4>Vitamin & Obat</h4>
+                                    <p>Suplemen daya tahan tubuh, obat kutu, atau obat cacing.</p>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="hewan-option">
+                            <input type="radio" name="pilih_barang" value="Pasir & Kebersihan Kandang">
+                            <div class="hewan-card">
+                                <div class="hewan-icon">🧼</div>
+                                <div>
+                                    <h4>Pasir & Kebersihan Kandang</h4>
+                                    <p>Pasir kucing, disinfektan aman hewan, underpad, atau alas tidur.</p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div id="detail-barang-fields" class="detail-fields hidden">
+                        <div class="field-group">
+                            <label for="keterangan-barang" class="sub-label">Detail Barang & Rencana Pengiriman / Penjemputan</label>
+                            <textarea id="keterangan-barang" rows="2" placeholder="Contoh: 2 karung dry food kucing 5kg, siap dikirim ke shelter Bandung..."></textarea>
+                        </div>
+                        <div class="field-group">
+                            <label for="kontak-barang" class="sub-label">Nomor WhatsApp yang Bisa Dihubungi</label>
+                            <input type="tel" id="kontak-barang" placeholder="Contoh: 081234567890">
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button type="button" class="btn-back btn-kembali-awal">← Kembali</button>
+                        <button type="button" id="btn-submit-barang" class="btn-cta-orange" disabled>
+                            Pilih Jenis Perlengkapan
+                        </button>
+                    </div>
+                </div>
+
+                <!-- FORM KHUSUS PILIHAN 3 (UANG) -->
+                <div id="form-nominal-box" class="nominal-card hidden">
+                    <label for="input-nominal" class="input-label">
+                        Masukkan Nominal Donasi <span class="text-orange">Uang</span>
+                    </label>
+                    
+                    <div class="nominal-input-wrapper">
+                        <span class="currency-prefix">Rp</span>
+                        <input 
+                            type="text" 
+                            id="input-nominal" 
+                            placeholder="0" 
+                            inputmode="numeric"
+                            autocomplete="off"
+                        >
+                    </div>
+
+                    <div class="quick-amounts">
+                        <button type="button" class="btn-quick" data-amount="25000">Rp 25.000</button>
+                        <button type="button" class="btn-quick" data-amount="50000">Rp 50.000</button>
+                        <button type="button" class="btn-quick" data-amount="100000">Rp 100.000</button>
+                        <button type="button" class="btn-quick" data-amount="250000">Rp 250.000</button>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button type="button" class="btn-back btn-kembali-awal">← Kembali</button>
+                        <button type="button" id="btn-submit-donasi" class="btn-cta-orange" disabled>
+                            Kirim Donasi
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LANGKAH 3: PESAN SUKSES DENGAN TELAPAK KUCING & SUARA MIAW -->
+            <div id="step-sukses" class="sukses-box hidden">
+                <div class="paw-wrapper" id="btn-replay-miaw" title="Klik untuk dengar suara miaw lagi">
+                    <svg class="cat-paw-svg" viewBox="0 0 64 64" width="44" height="44" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M32 34c-7.5 0-14 5.2-14 11.8 0 3.8 3.2 6.2 7.2 6.2 2.4 0 4.5-.9 6.8-.9s4.4.9 6.8.9c4 0 7.2-2.4 7.2-6.2C46 39.2 39.5 34 32 34z"/>
+                        <ellipse cx="14.5" cy="27.5" rx="4.5" ry="6.5" transform="rotate(-22 14.5 27.5)"/>
+                        <ellipse cx="25.5" cy="19.5" rx="4.8" ry="7" transform="rotate(-8 25.5 19.5)"/>
+                        <ellipse cx="38.5" cy="19.5" rx="4.8" ry="7" transform="rotate(8 38.5 19.5)"/>
+                        <ellipse cx="49.5" cy="27.5" rx="4.5" ry="6.5" transform="rotate(22 49.5 27.5)"/>
+                    </svg>
+                </div>
+                <span class="miaw-badge">“Miaw~ Terima kasih!”</span>
+                <h2>Terima kasih atas kebaikanmu!</h2>
+                <p id="pesan-sukses"></p>
+                <button type="button" id="btn-selesai" class="btn-cta-orange">Selesai</button>
+            </div>
+
+            <!-- FILE AUDIO MIAW -->
+            <audio id="audio-miaw" src="../Assets/ssstik.io_1795451790377.mp3" preload="auto"></audio>
+
+        </div>
+    </main>
+    <!-- ==== AKHIR HALAMAN ==== -->
 
     <!-- === FOOTER === -->
     <footer class="site-footer">
@@ -62,7 +289,6 @@
               <li><a href="../katalog-pet/pets.html">Katalog Adopsi</a></li>
               <li><a href="../donasi/donasi.html">Donasi</a></li>
               <li><a href="../my-pet-tracker/my-pet-tracker.html">Daily Care Tracker</a></li>
-
             </ul>
           </div>
       
@@ -98,5 +324,7 @@
           <p>&copy; 2026 Rengkuh. Dibuat dengan sayang untuk setiap ekor yang menunggu.</p>
         </div>
     </footer>
+
+    <script src="donasi.js"></script>
 </body>
 </html>

@@ -34,9 +34,232 @@
 
     <!-- ==== START PAGE ==== -->
 
+    <main class="adopt-page">
+        <div class="adopt-container">
 
+            <a href="../katalog-pet/pets.html" class="back-link" id="link-kembali-profil">&larr; Kembali ke profil</a>
 
-    
+            <!-- ===== AREA FORM (1 halaman, 1 kali isi) ===== -->
+            <div class="adopt-layout" id="area-form">
+
+                <section class="adopt-main">
+                    <p class="step-label">Formulir adopsi</p>
+                    <h1 class="adopt-title">Kenalan dengan <em class="nama-hewan">Mochi</em></h1>
+                    <p class="adopt-intro">
+                        Ceritakan sedikit tentang dirimu agar kami bisa memastikan <span class="nama-hewan">Mochi</span> menemukan rumah yang tepat.
+                    </p>
+
+                    <form id="form-adopsi" class="adopt-form" action="#" method="get" novalidate>
+                        <input type="hidden" id="id-hewan" name="id_hewan" value="">
+
+                        <!-- ===== DATA DIRI ===== -->
+                        <h2 class="form-section-title">Data diri</h2>
+
+                        <div class="form-group">
+                            <label for="nama">Nama lengkap</label>
+                            <input type="text" id="nama" name="nama" placeholder="Nama kamu" required autofocus>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="text" id="email" name="email" placeholder="nama@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telepon">Nomor WhatsApp</label>
+                                <input type="text" id="telepon" name="telepon" placeholder="0812-0000-0000" maxlength="15">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alasan">Alasan ingin mengadopsi</label>
+                            <textarea id="alasan" name="alasan" rows="4" placeholder="Ceritakan tentang rumah dan rutinitasmu..." required></textarea>
+                        </div>
+
+                        <!-- ===== RUMAH & RUTINITAS ===== -->
+                        <h2 class="form-section-title">Rumah dan rutinitas</h2>
+
+                        <fieldset class="form-fieldset">
+                            <legend>Jenis tempat tinggal</legend>
+                            <div class="option-list">
+                                <div class="option-item">
+                                    <input type="radio" id="rumah" name="tempat" value="Rumah">
+                                    <label for="rumah">Rumah</label>
+                                </div>
+                                <div class="option-item">
+                                    <input type="radio" id="apartemen" name="tempat" value="Apartemen">
+                                    <label for="apartemen">Apartemen</label>
+                                </div>
+                                <div class="option-item">
+                                    <input type="radio" id="kos" name="tempat" value="Kos / Kontrakan">
+                                    <label for="kos">Kos / Kontrakan</label>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="kepemilikan">Status tempat tinggal</label>
+                                <select name="kepemilikan" id="kepemilikan">
+                                    <option value="">--Pilih status--</option>
+                                    <option value="milik">Milik sendiri</option>
+                                    <option value="sewa">Sewa</option>
+                                    <option value="keluarga">Rumah keluarga</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="anggota">Jumlah anggota rumah</label>
+                                <input type="number" id="anggota" name="anggota" min="1" max="20" value="1">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sendirian">Berapa lama hewan ditinggal sendiri per hari?</label>
+                            <select name="sendirian" id="sendirian">
+                                <option value="">--Pilih durasi--</option>
+                                <option value="kurang4">Kurang dari 4 jam</option>
+                                <option value="4-8">4 sampai 8 jam</option>
+                                <option value="lebih8">Lebih dari 8 jam</option>
+                            </select>
+                        </div>
+
+                        <fieldset class="form-fieldset">
+                            <legend>Hewan lain di rumah</legend>
+                            <div class="option-list">
+                                <div class="option-item">
+                                    <input type="checkbox" id="kucing" name="hewan_lain" value="Kucing">
+                                    <label for="kucing">Kucing</label>
+                                </div>
+                                <div class="option-item">
+                                    <input type="checkbox" id="anjing" name="hewan_lain" value="Anjing">
+                                    <label for="anjing">Anjing</label>
+                                </div>
+                                <div class="option-item">
+                                    <input type="checkbox" id="lainnya" name="hewan_lain" value="Hewan lainnya">
+                                    <label for="lainnya">Hewan lainnya</label>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <div class="form-group">
+                            <label for="pengalaman">Pengalaman merawat hewan</label>
+                            <input list="daftar-pengalaman" id="pengalaman" name="pengalaman" placeholder="Pilih atau ketik sendiri">
+                            <datalist id="daftar-pengalaman">
+                                <option value="Belum pernah">
+                                <option value="Kurang dari 1 tahun">
+                                <option value="1 sampai 3 tahun">
+                                <option value="Lebih dari 3 tahun">
+                            </datalist>
+                        </div>
+
+                        <!-- ===== JADWAL & PERSETUJUAN ===== -->
+                        <h2 class="form-section-title">Jadwal dan persetujuan</h2>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="tanggal">Tanggal bertemu <span class="nama-hewan">Mochi</span></label>
+                                <input type="date" id="tanggal" name="tanggal">
+                            </div>
+                            <div class="form-group">
+                                <label for="waktu">Waktu kunjungan</label>
+                                <select name="waktu" id="waktu">
+                                    <option value="">--Pilih waktu--</option>
+                                    <option value="Pagi (09.00 - 11.00)">Pagi (09.00 - 11.00)</option>
+                                    <option value="Siang (12.00 - 14.00)">Siang (12.00 - 14.00)</option>
+                                    <option value="Sore (15.00 - 17.00)">Sore (15.00 - 17.00)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="foto-rumah">Foto tempat tinggal</label>
+                            <input type="file" id="foto-rumah" name="foto_rumah" accept="image/png, image/jpeg" multiple>
+                            <p class="field-hint">Opsional. Unggah beberapa foto ruangan tempat <span class="nama-hewan">Mochi</span> akan tinggal.</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="catatan">Catatan tambahan</label>
+                            <textarea id="catatan" name="catatan" rows="3" placeholder="Ada hal lain yang ingin kamu sampaikan?"></textarea>
+                        </div>
+
+                        <fieldset class="form-fieldset">
+                            <legend>Persetujuan</legend>
+                            <div class="option-list vertical">
+                                <div class="option-item">
+                                    <input type="checkbox" id="setuju-rawat" name="setuju_rawat">
+                                    <label for="setuju-rawat">Saya berkomitmen merawat <span class="nama-hewan">Mochi</span> seumur hidupnya.</label>
+                                </div>
+                                <div class="option-item">
+                                    <input type="checkbox" id="setuju-kunjungan" name="setuju_kunjungan">
+                                    <label for="setuju-kunjungan">Saya bersedia dihubungi dan dikunjungi tim Rengkuh setelah adopsi.</label>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <p class="error-msg" id="error-form"></p>
+
+                        <div class="button-row right">
+                            <button type="submit" class="btn-submit">Kirim Pengajuan</button>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- KARTU HEWAN -->
+                <aside class="pet-summary">
+                    <img src="../Assets/mochi.jpg" alt="Foto hewan" id="foto-hewan">
+                    <div class="pet-summary-body">
+                        <h2 class="nama-hewan">Mochi</h2>
+                        <p class="pet-summary-breed" id="hewan-ras">Domestik Shorthair</p>
+                        <hr>
+                        <p class="pet-summary-note">
+                            Proses adopsi Rengkuh gratis. Kami hanya ingin memastikan kecocokan terbaik untuk kamu dan <span class="nama-hewan">Mochi</span>.
+                        </p>
+                    </div>
+                </aside>
+
+            </div>
+
+            <!-- ===== HASIL SETELAH FORM DIKIRIM ===== -->
+            <section class="success-card" id="sukses" style="display: none;">
+                <div class="success-icon">&#10003;</div>
+                <p class="step-label">Pengajuan terkirim</p>
+                <h1 class="adopt-title" id="sukses-judul">Terima kasih!</h1>
+                <p class="adopt-intro success-intro">
+                    Tim Rengkuh akan menghubungimu dalam 1 sampai 2 hari kerja untuk mengonfirmasi jadwal bertemu <span class="nama-hewan">Mochi</span>.
+                </p>
+
+                <div class="summary-box">
+                    <h2>Ringkasan pengajuan</h2>
+                    <dl class="summary-list">
+                        <dt>Hewan diadopsi</dt>
+                        <dd id="r-hewan-adopsi"></dd>
+                        <dt>Nama</dt>
+                        <dd id="r-nama"></dd>
+                        <dt>Email</dt>
+                        <dd id="r-email"></dd>
+                        <dt>Tempat tinggal</dt>
+                        <dd id="r-tempat"></dd>
+                        <dt>Anggota rumah</dt>
+                        <dd id="r-anggota"></dd>
+                        <dt>Hewan lain</dt>
+                        <dd id="r-hewan"></dd>
+                        <dt>Jadwal bertemu</dt>
+                        <dd id="r-jadwal"></dd>
+                        <dt>WhatsApp</dt>
+                        <dd id="r-telepon"></dd>
+                    </dl>
+                </div>
+
+                <div class="button-row center">
+                    <a href="../katalog-pet/pets.html" class="btn-back">Lihat hewan lain</a>
+                    <a href="../index.html" class="btn-submit btn-link">Ke beranda</a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="adopt-form.js"></script>
 
     <!-- ==== END PAGE ==== -->
 
