@@ -210,8 +210,11 @@ function cocokHewan(hewan, jawaban){
             if (h.traits.bolehPelihara !== userBoleh) cocok = false;
         }
 
-        // 3. Waktu sendiri
-        if (jawaban.waktuSendiri && h.traits.waktuSendiri) {
+        // 3. Waktu sendiri............................................................................................................................................................................................................................................................................................
+        // cek user udah jawab atau belum jika user menjawab pertanyaan waktuSendiri dan data hewa juga ada waktu Sendiri yang sama
+        if (jawaban.waktuSendiri && h.traits.waktuSendiri) { 
+
+            //cek user sering ninggalin rumah tapi hewan butuh ditemnani
             if (jawaban.waktuSendiri === "Lebih dari 5 jam" && h.traits.waktuSendiri === "Kurang dari 2 jam") {
                 cocok = false;
             }
@@ -275,7 +278,8 @@ function renderKartuHewan(hewan){
         `);
 
         $kartu.find('.btn-adopt').on('click', function () {
-            window.location.href = `../pet-detail/pet-detail.html?id=${encodeURIComponent(h.id)}`;
+            window.location.href = `../pet-detail/pet-detail.html?id=${encodeURIComponent(h.id)}`; // ambil data hewan dengan id 
+            //file tujuan lalu encodeURIComponent = mengubah format misal ID "kucing 01" = "Kucing%2001"
         });
 
         $containerHewan.append($kartu);
